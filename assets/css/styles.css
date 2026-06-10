@@ -328,9 +328,16 @@ img { max-width: 100%; display: block; }
   overflow: hidden; box-shadow: var(--shadow-product);
   display: flex; flex-direction: column; justify-content: space-between;
   padding: 34px; color: #fff; isolation: isolate;
-  transition: transform .5s cubic-bezier(.2,.7,.3,1), box-shadow .5s;
+  transition: transform .4s cubic-bezier(.2,.7,.3,1), box-shadow .4s;
   will-change: transform;
 }
+/* moving glare that follows the cursor during 3D tilt */
+.media-card__glare {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none; border-radius: inherit;
+  opacity: 0; transition: opacity .4s;
+  background: radial-gradient(circle at var(--gx,50%) var(--gy,0%), rgba(255,255,255,.28), transparent 45%);
+}
+.media-card.is-tilting .media-card__glare { opacity: 1; }
 .media-card:hover {
   transform: translateY(-8px) rotate(-.6deg) scale(1.012);
   box-shadow: rgba(0,0,0,.26) 0 28px 64px -12px;
@@ -426,9 +433,21 @@ img { max-width: 100%; display: block; }
    Scroll-reveal
    ============================================================ */
 /* Progressive enhancement: content is visible by default; only hidden (to be
-   animated in) when JS is active, so no-JS / print / crawlers see everything. */
-.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1); }
-.reveal.in { opacity: 1; transform: none; }
+   animated in) when JS is active, so no-JS / print / crawlers see everything.
+   3D scroll-reveal: elements rise + un-tilt on a perspective plane. */
+.js .reveal {
+  opacity: 0;
+  transform: perspective(1200px) rotateX(7deg) translateY(30px);
+  transform-origin: 50% 100%;
+  transition: opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s cubic-bezier(.2,.7,.3,1);
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: perspective(1200px) rotateX(0) translateY(0); }
+
+/* 3D tilt — applied via JS on pointer-fine devices */
+.tilt { transform-style: preserve-3d; }
+.tilt__inner { transform: translateZ(40px); transform-style: preserve-3d; }
+@media (hover: none) { .tilt { transform: none !important; } }
 .reveal[data-d="1"] { transition-delay: .08s; }
 .reveal[data-d="2"] { transition-delay: .16s; }
 .reveal[data-d="3"] { transition-delay: .24s; }
