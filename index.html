@@ -88,12 +88,16 @@
     <div class="skills-grid">
       <div class="skill-card reveal">
         <div class="skill-card__icon">⚙️</div>
-        <h3>Backend &amp; APIs</h3>
-        <p>Scalable services, realtime &amp; async pipelines.</p>
+        <h3>Backend &amp; Architecture</h3>
+        <p>Scalable services, distributed &amp; event-driven systems.</p>
         <div class="chips">
-          <span class="chip">NestJS</span><span class="chip">Node.js</span><span class="chip">Express</span>
-          <span class="chip">GraphQL · Apollo</span><span class="chip">REST</span><span class="chip">Socket.IO</span>
-          <span class="chip">BullMQ</span><span class="chip">Java</span>
+          <span class="chip">NestJS</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Java</span>
+          <span class="chip">REST</span><span class="chip">GraphQL · Apollo</span><span class="chip">gRPC</span>
+          <span class="chip">WebSockets · SSE</span><span class="chip">Socket.IO</span>
+          <span class="chip">Microservices</span><span class="chip">Event-driven</span><span class="chip">Message queues · BullMQ · Kafka</span>
+          <span class="chip">CQRS · DDD</span><span class="chip">Clean Architecture</span><span class="chip">SOLID</span>
+          <span class="chip">OAuth2 · JWT · RBAC</span><span class="chip">Webhooks</span><span class="chip">Rate limiting</span>
+          <span class="chip">Caching strategies</span><span class="chip">Observability</span>
         </div>
       </div>
 
@@ -161,8 +165,7 @@
         <h3>Languages</h3>
         <ul class="langs">
           <li><span>Vietnamese</span><b>Native</b><i style="--lv:100%"></i></li>
-          <li><span>English</span><b>Professional working</b><i style="--lv:85%"></i></li>
-          <li><span>French</span><b>Daily work with FR teams &amp; products</b><i style="--lv:45%"></i></li>
+          <li><span>English</span><b>Professional working · ~7/10</b><i style="--lv:70%"></i></li>
         </ul>
       </div>
       <div class="beyond__col">
@@ -226,7 +229,7 @@
     <article class="project project--flip reveal">
       <div class="project__media">
         <div class="media-card bg-night">
-          <div class="media-card__mono">Np</div>
+          <div class="media-card__logo"><img src="assets/img/nightpass.png" alt="NightPass logo" loading="lazy"></div>
           <div class="media-card__foot">
             <div><div class="media-card__name">NightPass</div><div class="media-card__url">nightpass.fr</div></div>
             <span class="media-card__commits">579 · 59%</span>
@@ -258,26 +261,30 @@
     <article class="project reveal">
       <div class="project__body">
         <span class="project__index">03</span>
-        <div class="project__tags"><span class="tag tag--live">Live</span><span class="tag">AI</span><span class="tag">B2B SaaS</span></div>
+        <div class="project__tags"><span class="tag tag--live">Live</span><span class="tag">AI</span><span class="tag">Voice</span><span class="tag">B2B SaaS</span></div>
         <h3>SparkPlan · Sortlist AI</h3>
         <p class="project__role">AI Engineer · AI budget advisor embedded in Sortlist.com</p>
         <div class="project__metric"><span class="ico">📊</span> Live on Sortlist.com · ~5k+ AI budget reports generated</div>
-        <p class="project__desc">An AI advisor that turns a free-text project brief into a structured budget estimate with expertise breakdowns and a
-          branded report — running live as a widget on the Sortlist B2B marketplace.</p>
+        <p class="project__desc">An AI suite for web agencies: a budget advisor that turns a free-text brief into a structured estimate (running live as
+          a widget on the Sortlist marketplace), plus <b>SparkPlan Voice</b> — realtime AI voice agents that qualify leads over the phone.</p>
         <ul class="project__points">
-          <li>Near-sole author of the integration backend (<b>up to 94% of commits</b>) across two services.</li>
+          <li>Near-sole author of the integration backend (<b>up to 94% of commits</b>) across multiple services.</li>
           <li>Engineered the OpenAI + LangChain + ChromaDB pipeline: prompt design, multi-model routing (GPT-4o/4/3.5) and language auto-matching across 5+ EU locales.</li>
-          <li>Built the full report pipeline — conversation capture, RAG-grounded generation, and HTML email delivery.</li>
+          <li>Built realtime voice agents (telephony + WebSocket streaming) and the full report pipeline — conversation capture, RAG-grounded generation and HTML email delivery.</li>
         </ul>
         <div class="project__tech chips">
           <span class="chip">NestJS</span><span class="chip">OpenAI</span><span class="chip">LangChain</span>
-          <span class="chip">ChromaDB</span><span class="chip">MongoDB</span><span class="chip">Stripe</span><span class="chip">Azure OpenAI</span>
+          <span class="chip">ChromaDB</span><span class="chip">Voice agents</span><span class="chip">WebSocket</span>
+          <span class="chip">MongoDB</span><span class="chip">Stripe</span><span class="chip">Azure OpenAI</span>
         </div>
-        <div class="project__links"><a class="btn btn--ghost" href="https://sparkplan.ai" target="_blank" rel="noopener">Visit site <span class="chev">↗</span></a></div>
+        <div class="project__links">
+          <a class="btn btn--ghost" href="https://sparkplan.ai/web-agencies" target="_blank" rel="noopener">Visit site <span class="chev">↗</span></a>
+          <a class="btn btn--ghost" href="https://sparkplanvoice.com" target="_blank" rel="noopener">SparkPlan Voice <span class="chev">↗</span></a>
+        </div>
       </div>
       <div class="project__media">
         <div class="media-card bg-spark">
-          <div class="media-card__mono">Sp</div>
+          <div class="media-card__logo"><img src="assets/img/sparkplan.ico" alt="SparkPlan logo" loading="lazy"></div>
           <div class="media-card__foot">
             <div><div class="media-card__name">SparkPlan</div><div class="media-card__url">sparkplan.ai</div></div>
             <span class="media-card__commits">AI · 94%</span>
@@ -414,7 +421,7 @@
     <article class="project project--flip reveal">
       <div class="project__media">
         <div class="media-card bg-weshake">
-          <div class="media-card__mono">We</div>
+          <div class="media-card__logo"><img src="assets/img/weshake.png" alt="WeShake logo" loading="lazy"></div>
           <div class="media-card__foot">
             <div><div class="media-card__name">WeShake</div><div class="media-card__url">weshake.io</div></div>
             <span class="media-card__commits">715 commits</span>
@@ -464,7 +471,7 @@
       </div>
       <div class="project__media">
         <div class="media-card bg-oovoom">
-          <div class="media-card__mono">Oo</div>
+          <div class="media-card__logo"><img src="assets/img/oovoom.png" alt="OOVOOM logo" loading="lazy"></div>
           <div class="media-card__foot">
             <div><div class="media-card__name">OOVOOM</div><div class="media-card__url">oovoom.com</div></div>
             <span class="media-card__commits">404 · 52%</span>
@@ -477,7 +484,7 @@
     <article class="project project--flip reveal">
       <div class="project__media">
         <div class="media-card bg-cylimit">
-          <div class="media-card__mono">Cy</div>
+          <div class="media-card__logo"><img src="assets/img/cylimit.png" alt="CyLimit logo" loading="lazy"></div>
           <div class="media-card__foot">
             <div><div class="media-card__name">CyLimit</div><div class="media-card__url">NFT fantasy cycling</div></div>
             <span class="media-card__commits">Realtime · NFT</span>
@@ -515,14 +522,14 @@
     </div>
     <div class="more-grid">
       <div class="mini reveal">
-        <div class="mini__top"><h4>DSL · Days Legacy</h4><span class="mini__badge">Live · AI</span></div>
+        <div class="mini__top"><h4><img class="mini__logo" src="assets/img/dayslegacy.png" alt="" loading="lazy">DSL · Days Legacy</h4><span class="mini__badge">Live · AI</span></div>
         <p>AI wealth-management &amp; legacy-planning advisor: fuses a user's portfolio data with real-time financial-news
           analysis to answer planning and risk questions. Built full-stack on a GraphQL/Hasura backend.</p>
         <div class="mini__tech">NestJS · Hasura · GraphQL · OpenAI · Postgres · Redis</div>
         <a class="mini__link" href="https://www.dayslegacy.com" target="_blank" rel="noopener">dayslegacy.com ↗</a>
       </div>
       <div class="mini reveal" data-d="1">
-        <div class="mini__top"><h4>Eddwin</h4><span class="mini__badge">Live</span></div>
+        <div class="mini__top"><h4><img class="mini__logo" src="assets/img/eddwin.png" alt="" loading="lazy">Eddwin</h4><span class="mini__badge">Live</span></div>
         <p>Education marketplace connecting learners &amp; trainers with Stripe subscription tiers and a multilingual Next.js front-end.</p>
         <div class="mini__tech">NestJS · Next.js 14 · Bull · Stripe</div>
         <a class="mini__link" href="https://formation.eddwin.fr" target="_blank" rel="noopener">formation.eddwin.fr ↗</a>
