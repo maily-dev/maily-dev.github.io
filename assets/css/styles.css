@@ -59,6 +59,8 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+:root { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
 body {
   font-family: var(--font);
   color: var(--ink);
@@ -69,6 +71,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  transition: background .4s ease, color .4s ease;
 }
 a { color: var(--blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -118,8 +121,8 @@ img { max-width: 100%; display: block; }
 .btn--ghost:hover { background: rgba(0,102,204,.06); }
 .tile-dark .btn--ghost, .tile-void .btn--ghost { color: var(--sky); border-color: rgba(41,151,255,.4); }
 .tile-dark .btn--ghost:hover, .tile-void .btn--ghost:hover { background: rgba(41,151,255,.1); }
-.btn--light { background: #fff; color: var(--ink); }
-.btn--light:hover { background: var(--parchment); }
+.btn--light { background: #fff; color: #1d1d1f; }
+.btn--light:hover { background: #ececf0; }
 .btn .chev { transition: transform .25s; }
 .btn:hover .chev { transform: translateX(3px); }
 
@@ -161,8 +164,29 @@ img { max-width: 100%; display: block; }
   padding: 6px 14px; border-radius: var(--r-pill); opacity: 1 !important;
 }
 .nav__cta:hover { background: var(--blue-focus); }
+.nav__tools { display: flex; align-items: center; gap: 6px; }
+.nav__theme {
+  width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hairline);
+  background: transparent; cursor: pointer; display: grid; place-items: center;
+  font-size: 15px; color: var(--ink); transition: background .2s, border-color .2s, transform .3s;
+}
+.nav__theme:hover { background: var(--parchment); transform: rotate(12deg); }
+.nav__theme::before { content: "☾"; }
+[data-theme="dark"] .nav__theme::before { content: "☀"; }
 .nav__burger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
-.nav__burger span { display: block; width: 22px; height: 1.6px; background: var(--ink); margin: 5px 0; transition: .3s; }
+.nav__burger span { display: block; width: 22px; height: 1.6px; background: var(--ink); margin: 5px 0; transition: transform .3s, opacity .3s; transform-origin: center; }
+.nav__burger.open span:nth-child(1) { transform: translateY(6.6px) rotate(45deg); }
+.nav__burger.open span:nth-child(2) { opacity: 0; }
+.nav__burger.open span:nth-child(3) { transform: translateY(-6.6px) rotate(-45deg); }
+/* scroll-spy active link */
+.nav__links a[data-spy].active { color: var(--blue); opacity: 1; font-weight: 500; }
+/* scrim behind mobile drawer */
+.nav__scrim {
+  position: fixed; inset: 0; z-index: 90; background: rgba(0,0,0,.55);
+  opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s;
+  backdrop-filter: blur(2px);
+}
+.nav__scrim.open { opacity: 1; visibility: visible; }
 
 /* ============================================================
    HERO
@@ -175,7 +199,8 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 .hero__grid {
-  position: absolute; inset: 0; z-index: 0; opacity: .5;
+  position: absolute; inset: -40px; z-index: 0; opacity: .5;
+  transition: transform .2s ease-out;
   background-image:
     linear-gradient(var(--hairline) 1px, transparent 1px),
     linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
@@ -351,6 +376,9 @@ img { max-width: 100%; display: block; }
   transition: transform .6s cubic-bezier(.2,.7,.3,1);
 }
 .media-card__logo img { width: 60px; height: 60px; object-fit: contain; }
+/* wide wordmark logos (e.g. OOVOOM) get a horizontal white badge */
+.media-card__logo--wide { width: auto; min-width: 84px; max-width: 220px; height: 64px; padding: 0 18px; border-radius: 16px; }
+.media-card__logo--wide img { width: auto; max-width: 180px; height: 34px; }
 .media-card:hover .media-card__logo { transform: translateY(-4px) scale(1.05) rotate(.4deg); }
 .media-card::after {
   content: ""; position: absolute; inset: 0; z-index: -1; opacity: .14;
@@ -459,12 +487,19 @@ img { max-width: 100%; display: block; }
 @media (max-width: 900px) {
   :root { --section: 72px; }
   .nav__links {
-    position: fixed; inset: var(--nav-h) 0 auto 0; flex-direction: column;
-    background: rgba(250,250,252,.96); backdrop-filter: blur(20px);
-    padding: 24px; gap: 18px; border-bottom: 1px solid var(--hairline);
-    transform: translateY(-120%); transition: transform .35s cubic-bezier(.2,.7,.3,1);
+    position: fixed; top: 0; right: 0; bottom: 0; left: auto; z-index: 95;
+    width: min(80vw, 320px); flex-direction: column; align-items: flex-start;
+    justify-content: flex-start; gap: 6px;
+    background: var(--pearl); backdrop-filter: blur(20px);
+    padding: calc(var(--nav-h) + 28px) 28px 28px; border-left: 1px solid var(--hairline);
+    box-shadow: rgba(0,0,0,.25) -20px 0 60px -20px;
+    transform: translateX(100%); transition: transform .4s cubic-bezier(.2,.7,.3,1);
+    list-style: none;
   }
   .nav__links.open { transform: none; }
+  .nav__links li { width: 100%; }
+  .nav__links a { display: block; padding: 12px 4px; font-size: 18px; border-bottom: 1px solid var(--hairline); width: 100%; }
+  .nav__links .nav__cta { display: inline-block; margin-top: 16px; border-bottom: 0; width: auto; }
   .nav__burger { display: block; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 36px 20px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
@@ -481,12 +516,62 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   TECH MARQUEE (hero)
+   ============================================================ */
+.marquee {
+  margin-top: 56px; overflow: hidden; padding: 16px 0;
+  border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+.marquee__track {
+  display: inline-flex; white-space: nowrap; animation: marquee 42s linear infinite; will-change: transform;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__track span {
+  padding: 0 14px; font-size: 14px; font-weight: 600; letter-spacing: -0.01em;
+  color: var(--ink-faint); display: inline-flex; align-items: center;
+}
+.marquee__track span::after { content: "·"; margin-left: 28px; color: var(--blue); opacity: .55; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+.bg-eddwin { background: #0f6a6e; }
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+[data-theme="dark"] {
+  --white: #0a0a0b;
+  --parchment: #0f0f11;
+  --pearl: #17171a;
+  --ink: #f5f5f7;
+  --ink-muted: #a1a1a6;
+  --ink-faint: #8a8a8f;
+  --hairline: rgba(255, 255, 255, 0.12);
+  --divider: #2a2a2c;
+  --shadow-card: rgba(0,0,0,.5) 0 2px 8px, rgba(0,0,0,.4) 0 10px 30px -6px;
+}
+[data-theme="dark"] .nav { background: rgba(12, 12, 14, 0.72); }
+[data-theme="dark"] .skill-card,
+[data-theme="dark"] .mini { background: var(--pearl); }
+[data-theme="dark"] .chip { background: rgba(255, 255, 255, 0.06); }
+[data-theme="dark"] .hero__avail { background: rgba(255, 255, 255, 0.06); }
+[data-theme="dark"] .hero {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(41,151,255,.08), transparent 60%),
+    var(--white);
+}
+[data-theme="dark"] .tl::before { background: var(--pearl); }
+[data-theme="dark"] .nav__theme:hover { background: rgba(255,255,255,.08); }
+/* stats band (tile-dark) & contact (tile-void) stay dark in both themes by design */
+
+/* ============================================================
    PRINT — turns the page into a clean one/two-page CV
    ============================================================ */
 @media print {
   :root { --section: 0; }
   .nav, .hero__grid, .hero__cta, .nav__burger, .project__media,
-  .contact__cta, #to-top, .no-print { display: none !important; }
+  .contact__cta, .marquee, #to-top, .no-print { display: none !important; }
   body { font-size: 11px; line-height: 1.4; color: #000; }
   .section, .hero { padding: 14px 0 !important; background: #fff !important; color: #000 !important; }
   .tile-dark, .tile-void, .tile-parchment { background: #fff !important; color: #000 !important; }

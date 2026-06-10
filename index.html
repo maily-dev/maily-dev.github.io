@@ -4,14 +4,15 @@
 <script>document.documentElement.className += ' js';</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Mai Ly — Full-Stack Engineer · AI &amp; Realtime Systems</title>
-<meta name="description" content="Mai Ly — Senior Full-Stack / Backend Engineer with 6+ years building production SaaS for European startups: AI &amp; voice platforms, realtime systems, fintech, e-commerce. NestJS · Node · React · Flutter · AWS." />
+<title>Mai Ly — Senior Backend Engineer · AI, Realtime &amp; Cloud</title>
+<meta name="description" content="Mai Ly — Senior Backend / Full-Stack Engineer. 6+ years building production SaaS for European startups: high-throughput NestJS/Node APIs, event-driven microservices, AI &amp; voice platforms, realtime systems. AWS &amp; Azure · Kubernetes." />
 <meta name="author" content="Mai Ly" />
+<meta name="theme-color" content="#0066cc" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Mai Ly — Full-Stack Engineer · AI &amp; Realtime Systems" />
-<meta property="og:description" content="6+ years shipping production SaaS: AI/voice, realtime, fintech, e-commerce. NestJS · Node · React · Flutter · AWS." />
+<meta property="og:title" content="Mai Ly — Senior Backend Engineer · AI, Realtime &amp; Cloud" />
+<meta property="og:description" content="6+ years shipping production backends: NestJS/Node, microservices, AI/voice, realtime. AWS &amp; Azure on Kubernetes." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="stylesheet" href="assets/css/styles.css" />
@@ -25,17 +26,21 @@
     <a href="#top" class="nav__brand">Mai<span>Ly</span></a>
     <nav>
       <ul class="nav__links" id="navlinks">
-        <li><a href="#work">Work</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#more">More</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#skills" data-spy="skills">Skills</a></li>
+        <li><a href="#work" data-spy="work">Work</a></li>
+        <li><a href="#more" data-spy="more">Projects</a></li>
+        <li><a href="#experience" data-spy="experience">Experience</a></li>
+        <li><a href="#contact" data-spy="contact">Contact</a></li>
         <li><a href="#" class="nav__cta" id="print-cv">Download CV</a></li>
       </ul>
     </nav>
-    <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav__tools">
+      <button class="nav__theme" id="theme-toggle" aria-label="Toggle light / dark mode" title="Toggle theme"></button>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
   <div class="nav__progress" id="progress" aria-hidden="true"></div>
+  <div class="nav__scrim" id="navscrim" aria-hidden="true"></div>
 </header>
 
 <main id="top">
@@ -46,18 +51,27 @@
   <div class="wrap">
     <div class="hero__avail reveal in"><span class="dot"></span> Open to Senior Backend &amp; Full-Stack roles</div>
     <h1 class="reveal in" data-d="1">Mai Ly<span class="accent">builds things that ship.</span></h1>
-    <p class="hero__sub reveal in" data-d="2">Senior Backend Engineer — AI, Realtime Systems &amp; Cloud DevOps.</p>
-    <p class="hero__tag reveal in" data-d="3">6+ years architecting and shipping production backends for European startups — high-throughput APIs,
-      realtime systems and LLM/voice platforms — and owning the whole pipeline to <b>AWS</b> &amp; <b>Azure</b> on Kubernetes.
-      Full-stack when a product needs it: React, Next.js and Flutter too.</p>
+    <p class="hero__sub reveal in" data-d="2">Senior Backend Engineer — distributed systems, AI &amp; realtime at scale.</p>
+    <p class="hero__tag reveal in" data-d="3">6+ years architecting production backends for European startups: high-throughput <b>NestJS / Node.js</b> APIs,
+      <b>event-driven microservices</b>, GraphQL and realtime systems, and LLM / voice platforms — designed, built and run
+      end-to-end on <b>AWS &amp; Azure</b> with Docker &amp; Kubernetes. Full-stack (React, Next.js, Flutter) when a product
+      needs a single owner from database to UI.</p>
     <div class="hero__cta reveal in" data-d="4">
-      <a href="#work" class="btn btn--primary">View selected work <span class="chev">→</span></a>
-      <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      <a href="#work" class="btn btn--primary">View my work <span class="chev">→</span></a>
+      <a href="#skills" class="btn btn--ghost">Explore the tech stack</a>
     </div>
     <div class="hero__meta reveal in" data-d="4">
-      <span><b>Digital Unicorn</b> · Senior / Full-Stack Engineer</span>
-      <span>📍 Vietnam — remote-first, EU hours</span>
-      <span>NestJS · Node · AWS &amp; Azure · K8s · React · Flutter</span>
+      <span><b>Digital Unicorn Co., Ltd</b> · Full-time Software Engineer</span>
+      <span>📍 Based in Vietnam</span>
+      <span><b>6+ yrs</b> · 20+ products shipped · 4k+ commits</span>
+    </div>
+  </div>
+
+  <!-- tech marquee -->
+  <div class="marquee reveal in" data-d="4" aria-hidden="true">
+    <div class="marquee__track">
+      <span>NestJS</span><span>Node.js</span><span>TypeScript</span><span>GraphQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>Elasticsearch</span><span>Kafka</span><span>Socket.IO</span><span>OpenAI</span><span>LangChain</span><span>AWS</span><span>Azure</span><span>Kubernetes</span><span>Docker</span><span>Stripe</span><span>React</span><span>Next.js</span><span>Flutter</span><span>Microservices</span><span>CQRS · DDD</span>
+      <span>NestJS</span><span>Node.js</span><span>TypeScript</span><span>GraphQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>Elasticsearch</span><span>Kafka</span><span>Socket.IO</span><span>OpenAI</span><span>LangChain</span><span>AWS</span><span>Azure</span><span>Kubernetes</span><span>Docker</span><span>Stripe</span><span>React</span><span>Next.js</span><span>Flutter</span><span>Microservices</span><span>CQRS · DDD</span>
     </div>
   </div>
 </section>
@@ -91,7 +105,7 @@
         <h3>Backend &amp; Architecture</h3>
         <p>Scalable services, distributed &amp; event-driven systems.</p>
         <div class="chips">
-          <span class="chip">NestJS</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Java</span>
+          <span class="chip">NestJS</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">AdonisJS</span><span class="chip">Java</span>
           <span class="chip">REST</span><span class="chip">GraphQL · Apollo</span><span class="chip">gRPC</span>
           <span class="chip">WebSockets · SSE</span><span class="chip">Socket.IO</span>
           <span class="chip">Microservices</span><span class="chip">Event-driven</span><span class="chip">Message queues · BullMQ · Kafka</span>
@@ -148,13 +162,14 @@
       </div>
 
       <div class="skill-card reveal" data-d="2">
-        <div class="skill-card__icon">💳</div>
-        <h3>Payments &amp; Web3</h3>
-        <p>Money flows, subscriptions &amp; tokenomics.</p>
+        <div class="skill-card__icon">🔌</div>
+        <h3>Integrations, Payments &amp; Web3</h3>
+        <p>Money flows, 3rd-party platforms &amp; tokenomics.</p>
         <div class="chips">
           <span class="chip">Stripe</span><span class="chip">MangoPay</span><span class="chip">RevenueCat</span>
-          <span class="chip">Web3.js · ethers</span><span class="chip">Thirdweb</span><span class="chip">NFT</span>
-          <span class="chip">Vesting</span><span class="chip">Firebase</span><span class="chip">Twilio</span>
+          <span class="chip">Google APIs · Auth · FCM · Calendar</span><span class="chip">Firebase</span>
+          <span class="chip">Algolia</span><span class="chip">Twilio</span><span class="chip">Brevo · SES</span>
+          <span class="chip">Web3.js · ethers</span><span class="chip">Thirdweb</span><span class="chip">NFT · Vesting</span>
         </div>
       </div>
     </div>
@@ -170,7 +185,7 @@
       </div>
       <div class="beyond__col">
         <h3>How I work</h3>
-        <p class="beyond__note">Six years embedded in distributed, cross-border product teams sharpens more than code.</p>
+        <p class="beyond__note">Years embedded in distributed, cross-border product teams sharpen more than code.</p>
         <div class="chips">
           <span class="chip">Clear communication</span><span class="chip">Team collaboration</span>
           <span class="chip">Code review &amp; mentoring</span><span class="chip">Ownership &amp; reliability</span>
@@ -471,7 +486,7 @@
       </div>
       <div class="project__media">
         <div class="media-card bg-oovoom">
-          <div class="media-card__logo"><img src="assets/img/oovoom.png" alt="OOVOOM logo" loading="lazy"></div>
+          <div class="media-card__logo media-card__logo--wide"><img src="assets/img/oovoom.png" alt="OOVOOM logo" loading="lazy"></div>
           <div class="media-card__foot">
             <div><div class="media-card__name">OOVOOM</div><div class="media-card__url">oovoom.com</div></div>
             <span class="media-card__commits">404 · 52%</span>
@@ -480,33 +495,35 @@
       </div>
     </article>
 
-    <!-- 10 CyLimit -->
+    <!-- 10 Eddwin -->
     <article class="project project--flip reveal">
       <div class="project__media">
-        <div class="media-card bg-cylimit">
-          <div class="media-card__logo"><img src="assets/img/cylimit.png" alt="CyLimit logo" loading="lazy"></div>
+        <div class="media-card bg-eddwin">
+          <div class="media-card__logo"><img src="assets/img/eddwin.png" alt="Eddwin logo" loading="lazy"></div>
           <div class="media-card__foot">
-            <div><div class="media-card__name">CyLimit</div><div class="media-card__url">NFT fantasy cycling</div></div>
-            <span class="media-card__commits">Realtime · NFT</span>
+            <div><div class="media-card__name">Eddwin</div><div class="media-card__url">formation.eddwin.fr</div></div>
+            <span class="media-card__commits">Live · EdTech</span>
           </div>
         </div>
       </div>
       <div class="project__body">
         <span class="project__index">10</span>
-        <div class="project__tags"><span class="tag tag--live">Live</span><span class="tag">Web3 · NFT</span></div>
-        <h3>CyLimit</h3>
-        <p class="project__role">Backend Engineer · NFT fantasy cycling game</p>
-        <div class="project__metric"><span class="ico">🚴</span> ~15k+ players worldwide</div>
-        <p class="project__desc">A blockchain fantasy-sports platform for professional cycling — collect rider NFTs, build teams and earn rewards from
-          real-world race results.</p>
+        <div class="project__tags"><span class="tag tag--live">Live</span><span class="tag">EdTech</span><span class="tag">SaaS</span></div>
+        <h3>Eddwin</h3>
+        <p class="project__role">Full-Stack Engineer · training marketplace (learners ↔ trainers)</p>
+        <div class="project__metric"><span class="ico">🎓</span> Live at formation.eddwin.fr · subscription marketplace</div>
+        <p class="project__desc">An education marketplace connecting learners with trainers — discovery, role-based onboarding, Stripe subscription tiers
+          and realtime chat — on a NestJS backend with a multilingual Next.js front-end.</p>
         <ul class="project__points">
-          <li>Built the realtime <b>announcement &amp; notification system</b> with Server-Sent Events for live user broadcasts.</li>
-          <li>Shipped a media-rich (video/image) announcement module on AWS S3 with unread-tracking APIs.</li>
+          <li>Built the multilingual <b>Next.js</b> front-end and learner/trainer onboarding flows.</li>
+          <li>Implemented an email-automation pipeline with <b>Bull</b> job queues and role-transition workflows.</li>
+          <li>Integrated <b>Stripe</b> subscription billing across 5+ trainer tiers.</li>
         </ul>
         <div class="project__tech chips">
-          <span class="chip">NestJS · GraphQL</span><span class="chip">MongoDB</span><span class="chip">ethers · Web3</span>
-          <span class="chip">SSE</span><span class="chip">IPFS · Pinata</span><span class="chip">Stripe</span>
+          <span class="chip">NestJS</span><span class="chip">Next.js 14</span><span class="chip">Bull · Redis</span>
+          <span class="chip">Stripe</span><span class="chip">Socket.IO</span><span class="chip">MongoDB</span>
         </div>
+        <div class="project__links"><a class="btn btn--ghost" href="https://formation.eddwin.fr" target="_blank" rel="noopener">Visit site <span class="chev">↗</span></a></div>
       </div>
     </article>
 
@@ -529,10 +546,10 @@
         <a class="mini__link" href="https://www.dayslegacy.com" target="_blank" rel="noopener">dayslegacy.com ↗</a>
       </div>
       <div class="mini reveal" data-d="1">
-        <div class="mini__top"><h4><img class="mini__logo" src="assets/img/eddwin.png" alt="" loading="lazy">Eddwin</h4><span class="mini__badge">Live</span></div>
-        <p>Education marketplace connecting learners &amp; trainers with Stripe subscription tiers and a multilingual Next.js front-end.</p>
-        <div class="mini__tech">NestJS · Next.js 14 · Bull · Stripe</div>
-        <a class="mini__link" href="https://formation.eddwin.fr" target="_blank" rel="noopener">formation.eddwin.fr ↗</a>
+        <div class="mini__top"><h4><img class="mini__logo" src="assets/img/cylimit.png" alt="" loading="lazy">CyLimit</h4><span class="mini__badge">Live · Web3</span></div>
+        <p>NFT fantasy cycling — collect rider NFTs and earn from real race results. I built the realtime SSE announcement &amp; notification system and media pipeline.</p>
+        <div class="mini__tech">NestJS · GraphQL · ethers · SSE · S3</div>
+        <a class="mini__link" href="https://cylimit.com/en/" target="_blank" rel="noopener">cylimit.com ↗</a>
       </div>
       <div class="mini reveal" data-d="1">
         <div class="mini__top"><h4>DeliverLIB</h4><span class="mini__badge">249 · 75%</span></div>
@@ -569,44 +586,51 @@
   <div class="wrap">
     <div class="reveal">
       <p class="eyebrow">Experience &amp; education</p>
-      <h2 class="section-title">Six years, one studio, dozens of products.</h2>
-      <p class="section-lead">Since 2020 I've been an engineer at <b>Digital Unicorn</b> — a French software studio that builds and
-        scales SaaS products for startups across Europe. That single home has let me ship 20+ products across fintech, health,
-        AI, e-commerce and Web3, growing from backend developer to senior/lead on the studio's hardest systems.</p>
+      <h2 class="section-title">Building backends that scale, since 2019.</h2>
+      <p class="section-lead">I shipped my first production Node.js APIs in 2019, and since 2020 I've been at <b>Digital Unicorn</b>,
+        a French software studio, delivering 20+ SaaS products across fintech, health, AI, e-commerce and Web3 — growing from
+        developer to senior / lead on its hardest systems.</p>
     </div>
     <div class="timeline">
       <div class="tl reveal">
         <div class="tl__when">2024 — Present</div>
         <h3>Senior Full-Stack Engineer</h3>
-        <div class="tl__org">Digital Unicorn (digitalunicorn.fr) — French software studio</div>
+        <div class="tl__org">Digital Unicorn Co., Ltd · full-time</div>
         <p>Lead/senior engineer on the studio's most demanding products: realtime multiplayer (Nutrissimo), GraphQL ticketing
           under live load (NightPass), and AI platforms — <b>DSL · Days Legacy</b>, an AI wealth-management advisor combining user data with
-          real-time financial-news analysis (NestJS · Hasura · GraphQL · OpenAI · Postgres · Redis), plus RP Tech AI, SparkPlan
-          and CLS AI. Own architecture, delivery and production reliability — frequently the top contributor on each codebase.</p>
+          real-time financial-news analysis (NestJS · Hasura · GraphQL · OpenAI), plus RP&nbsp;Tech&nbsp;AI, SparkPlan and CLS&nbsp;AI.
+          Own architecture, delivery and production reliability — frequently the top contributor on each codebase.</p>
         <div class="tl__tech">NestJS · Hasura · GraphQL · React · Next.js · Flutter · Supabase · OpenAI · AWS · Azure · Kubernetes</div>
       </div>
       <div class="tl reveal">
-        <div class="tl__when">2022 — 2024</div>
-        <h3>Backend Engineer</h3>
-        <div class="tl__org">Digital Unicorn — fintech, health, e-commerce &amp; Web3</div>
-        <p>Primary backend engineer on WeShake (fintech payments, 715 commits), DeliverLIB and Just Meat (delivery
-          marketplaces), the <b>BeParentalis</b> pediatric health app and the <b>RP Tech AI</b> productivity suite, plus Web3
-          products (Profiler&nbsp;Connection / Raisy, Kibo, CyLimit). Built payment integrations, multi-LLM AI features,
-          realtime systems and token-vesting logic on Node/NestJS with MySQL, MongoDB and PostgreSQL.</p>
-        <div class="tl__tech">Node · NestJS · Stripe · MangoPay · Web3.js · Socket.IO · Redis</div>
+        <div class="tl__when">2020 — 2024</div>
+        <h3>Backend / Full-Stack Engineer</h3>
+        <div class="tl__org">Digital Unicorn Co., Ltd · full-time</div>
+        <p>Primary backend engineer across the studio's portfolio: OOVOOM automotive ERP (404 commits, AWS EKS + Helm),
+          WeShake fintech payments (715 commits, Stripe + MangoPay), the BeParentalis pediatric health app, the RP&nbsp;Tech&nbsp;AI
+          productivity suite, delivery marketplaces (DeliverLIB, Just&nbsp;Meat) and Web3 products (Raisy, Kibo, CyLimit). Built
+          payment integrations, multi-LLM features, realtime systems, token vesting and multi-tier RBAC.</p>
+        <div class="tl__tech">Node · NestJS · MySQL · MongoDB · PostgreSQL · Stripe · MangoPay · Web3.js · Socket.IO · Docker</div>
       </div>
       <div class="tl reveal">
-        <div class="tl__when">2020 — 2022</div>
-        <h3>Backend Developer &amp; DevOps Engineer</h3>
-        <div class="tl__org">Digital Unicorn — OOVOOM &amp; early platforms</div>
-        <p>Joined as a backend developer on OOVOOM, an automotive ERP marketplace (404 commits). Designed multi-tier RBAC and
-          invoice automation, and owned the AWS EKS + Helm deployment pipeline. Also built the It's Called Fashion data-crawling
-          infrastructure.</p>
-        <div class="tl__tech">Node · Express · MySQL · AWS EKS · Helm · Docker · Puppeteer</div>
+        <div class="tl__when">2019 — 2020</div>
+        <h3>Software Developer</h3>
+        <div class="tl__org">Phuc Quan Service Trading Co., Ltd</div>
+        <p>Designed relational databases and built Node.js RESTful APIs; drove technology research and performance optimization,
+          and debugged &amp; refactored existing applications and software modules.</p>
+        <div class="tl__tech">Node.js · Express · MySQL · REST APIs</div>
       </div>
       <div class="tl reveal">
-        <div class="tl__when">Education</div>
-        <h3>Software Applications</h3>
+        <div class="tl__when">2019</div>
+        <h3>Software Developer</h3>
+        <div class="tl__org">G-Lance</div>
+        <p>Where my engineering career began — built the <b>Nail Schedule</b> booking project (06–12/2019): Node.js RESTful APIs
+          and relational schema design, cutting my teeth on debugging, refactoring and shipping real production features.</p>
+        <div class="tl__tech">Node.js · Express · MySQL</div>
+      </div>
+      <div class="tl reveal">
+        <div class="tl__when">2015 — 2018 · Education</div>
+        <h3>Software Applications · GPA 7.8/10</h3>
         <div class="tl__org">FPT Polytechnic — practical college</div>
         <p>Hands-on software-engineering programme. Continuously self-taught since: AI/LLM engineering, realtime systems,
           cloud architecture and modern frontend.</p>
@@ -621,7 +645,7 @@
     <div class="reveal">
       <p class="eyebrow">Contact</p>
       <h2>Let's build something<br/>worth shipping.</h2>
-      <p>Open to senior full-stack and backend roles — especially AI, realtime and product-heavy teams. Remote or EU-hours.</p>
+      <p>Open to senior backend and full-stack roles — especially AI, realtime and product-heavy teams.</p>
       <div class="contact__cta">
         <a class="btn btn--primary" href="mailto:mailypd02033@gmail.com">Email me <span class="chev">→</span></a>
         <a class="btn btn--light" href="#" id="print-cv-2">Download CV</a>
