@@ -1,13 +1,14 @@
 # Mai Ly — Portfolio
 
 A single-page portfolio + web CV. Static HTML/CSS/JS — no build step, no dependencies.
-Design language: Apple (clean, photography-first, SF Pro, single accent blue, alternating tiles).
+Layout: two columns, a sticky identity column (name, contact, section links) and the CV record on the right.
+One typeface (Schibsted Grotesk from Google Fonts), one accent colour, light/dark mode.
 
 ```
 portfolio/
 ├── index.html              ← all content (edit text/projects here)
 ├── assets/css/styles.css   ← design system & layout
-├── assets/js/main.js        ← scroll reveal, nav, print-to-PDF
+├── assets/js/main.js        ← theme toggle, section highlight, print-to-PDF
 ├── .nojekyll               ← tells GitHub Pages to serve files as-is
 └── README.md
 ```
@@ -21,13 +22,13 @@ python3 -m http.server 8080
 ```
 
 ## Download CV as PDF
-Click **Download CV** in the nav (or in the Contact section). It opens the browser print dialog,
+Click **Download CV** in the left column. It opens the browser print dialog,
 which is styled to produce a clean 1–2 page CV. Choose **Save as PDF**.
 
 ## What to edit before publishing
 Open `index.html` and update:
-- **Contact links** — email is `mailypd02033@gmail.com`; the **LinkedIn** link is a placeholder (`data-edit="linkedin"`) — replace `href="#"` with your real LinkedIn URL. GitHub points to `github.com/maily-dev`.
-- **Location / availability** line in the hero, if you want to change it.
+- **Contact links** in the left column (email, GitHub, LinkedIn).
+- **Availability** line under the intro, if you want to change it.
 - Any project wording you'd like to tune.
 
 ---
