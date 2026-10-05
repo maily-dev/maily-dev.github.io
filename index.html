@@ -39,11 +39,11 @@
 
     <nav class="toc" aria-label="Sections">
       <a href="#about" data-spy="about">About</a>
-      <a href="#work" data-spy="work">Selected work</a>
-      <a href="#more" data-spy="more">Other projects</a>
-      <a href="#experience" data-spy="experience">Experience</a>
       <a href="#skills" data-spy="skills">Skills</a>
       <a href="#education" data-spy="education">Education &amp; certificates</a>
+      <a href="#experience" data-spy="experience">Experience</a>
+      <a href="#work" data-spy="work">Selected work</a>
+      <a href="#more" data-spy="more">Other projects</a>
     </nav>
 
     <div class="side__bottom">
@@ -53,7 +53,7 @@
         <li><a href="https://www.linkedin.com/in/ly-mai-0ab4b21b8/" target="_blank" rel="noopener">linkedin.com/in/ly-mai-0ab4b21b8</a></li>
       </ul>
       <div class="tools">
-        <button type="button" class="btn" id="print-cv">Download CV</button>
+        <a class="btn" href="Mai-Ly-CV.pdf" download="Mai-Ly-CV.pdf">Download CV (PDF)</a>
         <button type="button" class="btn btn--quiet" id="theme-toggle" aria-pressed="false">Dark mode</button>
       </div>
     </div>
@@ -78,6 +78,115 @@
           <div><dt>Based in</dt><dd>Vietnam</dd></div>
         </dl>
       </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="block">
+      <h2 class="block__title">Skills</h2>
+      <dl class="skills">
+        <div class="skills__core">
+          <dt>Core stack</dt>
+          <dd>TypeScript, Node.js, NestJS, PostgreSQL, MongoDB, Redis, GraphQL, Docker, Kubernetes, AWS, Azure</dd>
+        </div>
+        <div>
+          <dt>Backend</dt>
+          <dd>NestJS, Node.js, Express, AdonisJS, TypeScript. REST, GraphQL (Apollo, Hasura), gRPC, WebSockets, SSE, Socket.IO.
+            Microservices, event-driven design, queues (BullMQ, Kafka), CQRS and DDD, OAuth2, JWT, RBAC, webhooks, rate limiting,
+            caching, observability.</dd>
+        </div>
+        <div>
+          <dt>AI and voice</dt>
+          <dd>OpenAI (GPT-4, 4o, 5; Assistants), Azure OpenAI, LangChain, ChromaDB and RAG, Retell AI, Deepgram, ElevenLabs, DeepL,
+            prompt design.</dd>
+        </div>
+        <div>
+          <dt>Data</dt>
+          <dd>PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch, Supabase. Prisma, TypeORM, Sequelize, Mongoose.</dd>
+        </div>
+        <div>
+          <dt>Cloud and DevOps</dt>
+          <dd>AWS (EC2, ECS, EKS, Lambda, S3, SES, CloudFront, Route 53), Azure (AKS, Pipelines), Cloudflare, Docker, Kubernetes,
+            Helm, ArgoCD, GitLab CI, Nginx, PM2.</dd>
+        </div>
+        <div>
+          <dt>Front end and mobile</dt>
+          <dd>React, Next.js 14 and 15, Vue and Nuxt, React Native, Flutter, Tailwind CSS, shadcn/ui, Ant Design.</dd>
+        </div>
+        <div>
+          <dt>Integrations</dt>
+          <dd>Stripe, MangoPay, RevenueCat, Google APIs (Auth, FCM, Calendar), Firebase, Algolia, Twilio, Brevo, Web3.js, ethers.js,
+            Thirdweb.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Education & certificates -->
+    <section id="education" class="block">
+      <h2 class="block__title">Education &amp; certificates</h2>
+      <ul class="creds">
+        <li>
+          <h3>Top Notch 2 English certificate</h3>
+          <p>CEFR level B2</p>
+        </li>
+        <li>
+          <h3>FPT Polytechnic</h3>
+          <p>Software applications, 2016 – 2018. GPA 7.8/10.</p>
+        </li>
+      </ul>
+      <h3 class="subhead">Languages</h3>
+      <ul class="langs">
+        <li><span>Vietnamese</span><span>Native</span></li>
+        <li><span>English</span><span>Professional working proficiency (B2)</span></li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="block">
+      <h2 class="block__title">Experience</h2>
+      <ol class="jobs">
+        <li class="job">
+          <p class="job__when">2024 – now</p>
+          <div>
+            <h3>Senior full-stack engineer</h3>
+            <p class="job__org">Digital Unicorn Co., Ltd, full-time</p>
+            <ul class="proj__points">
+              <li>Lead engineer on Nutrissimo, a realtime multiplayer game for Institut Pasteur de Lille that launches inside Moodle through LTI 1.3.</li>
+              <li>Backend lead on NightPass ticketing (59% of commits). Fixed a Redis out-of-memory incident and made rolling deploys safe during live events.</li>
+              <li>Built AI products end to end: Days Legacy, RP Tech AI, SparkPlan with its voice agents, and CLS AI.</li>
+              <li>Own architecture, delivery and production reliability, and I'm often the top contributor to the codebase.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <p class="job__when">2020 – 2024</p>
+          <div>
+            <h3>Backend and full-stack engineer</h3>
+            <p class="job__org">Digital Unicorn Co., Ltd, full-time</p>
+            <ul class="proj__points">
+              <li>Main backend engineer on WeShake (715 commits, Stripe and MangoPay payments) and OOVOOM (404 commits, ran the AWS EKS and Helm deployments).</li>
+              <li>Lead backend engineer on BeParentalis (78% of commits) and RP Tech AI (98% of commits).</li>
+              <li>Also built DeliverLIB, Just Meat, Raisy, Kibo and CyLimit: payments, realtime features, token vesting and role-based access.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <p class="job__when">2019 – 2020</p>
+          <div>
+            <h3>Software developer</h3>
+            <p class="job__org">Phuc Quan Service Trading Co., Ltd</p>
+            <p>Designed relational databases and built Node.js REST APIs. Researched tools, tuned performance, and debugged and
+              refactored existing modules.</p>
+          </div>
+        </li>
+        <li class="job">
+          <p class="job__when">2019</p>
+          <div>
+            <h3>Software developer</h3>
+            <p class="job__org">G-Lance</p>
+            <p>My first job. Built Nail Schedule, a booking product (June to December 2019): Node.js REST APIs and the database schema.</p>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <!-- Selected work -->
@@ -319,106 +428,6 @@
           <p class="proj__stack">Puppeteer, Express, PM2</p>
           <a class="proj__link" href="https://crawl.itscalledfashion.com" target="_blank" rel="noopener">crawl.itscalledfashion.com</a>
         </li>
-      </ul>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="block">
-      <h2 class="block__title">Experience</h2>
-      <ol class="jobs">
-        <li class="job">
-          <p class="job__when">2024 – now</p>
-          <div>
-            <h3>Senior full-stack engineer</h3>
-            <p class="job__org">Digital Unicorn Co., Ltd, full-time</p>
-            <p>Senior or lead engineer on the studio's hardest products: realtime multiplayer (Nutrissimo), ticketing under live load
-              (NightPass), and AI products (Days Legacy, RP Tech AI, SparkPlan, CLS AI). I own architecture, delivery and production
-              reliability, and I'm often the top contributor to the codebase.</p>
-          </div>
-        </li>
-        <li class="job">
-          <p class="job__when">2020 – 2024</p>
-          <div>
-            <h3>Backend and full-stack engineer</h3>
-            <p class="job__org">Digital Unicorn Co., Ltd, full-time</p>
-            <p>Main backend engineer across the studio's portfolio: OOVOOM (404 commits, AWS EKS and Helm), WeShake (715 commits,
-              Stripe and MangoPay), BeParentalis, RP Tech AI, the DeliverLIB and Just Meat marketplaces, and Web3 products (Raisy, Kibo,
-              CyLimit). Payments, multi-LLM features, realtime, token vesting and role-based access.</p>
-          </div>
-        </li>
-        <li class="job">
-          <p class="job__when">2019 – 2020</p>
-          <div>
-            <h3>Software developer</h3>
-            <p class="job__org">Phuc Quan Service Trading Co., Ltd</p>
-            <p>Designed relational databases and built Node.js REST APIs. Researched tools, tuned performance, and debugged and
-              refactored existing modules.</p>
-          </div>
-        </li>
-        <li class="job">
-          <p class="job__when">2019</p>
-          <div>
-            <h3>Software developer</h3>
-            <p class="job__org">G-Lance</p>
-            <p>My first job. Built Nail Schedule, a booking product (June to December 2019): Node.js REST APIs and the database schema.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="block">
-      <h2 class="block__title">Skills</h2>
-      <dl class="skills">
-        <div>
-          <dt>Backend</dt>
-          <dd>NestJS, Node.js, Express, AdonisJS, TypeScript. REST, GraphQL (Apollo, Hasura), gRPC, WebSockets, SSE, Socket.IO.
-            Microservices, event-driven design, queues (BullMQ, Kafka), CQRS and DDD, OAuth2, JWT, RBAC, webhooks, rate limiting,
-            caching, observability.</dd>
-        </div>
-        <div>
-          <dt>AI and voice</dt>
-          <dd>OpenAI (GPT-4, 4o, 5; Assistants), Azure OpenAI, LangChain, ChromaDB and RAG, Retell AI, Deepgram, ElevenLabs, DeepL,
-            prompt design.</dd>
-        </div>
-        <div>
-          <dt>Data</dt>
-          <dd>PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch, Supabase. Prisma, TypeORM, Sequelize, Mongoose.</dd>
-        </div>
-        <div>
-          <dt>Cloud and DevOps</dt>
-          <dd>AWS (EC2, ECS, EKS, Lambda, S3, SES, CloudFront, Route 53), Azure (AKS, Pipelines), Cloudflare, Docker, Kubernetes,
-            Helm, ArgoCD, GitLab CI, Nginx, PM2.</dd>
-        </div>
-        <div>
-          <dt>Front end and mobile</dt>
-          <dd>React, Next.js 14 and 15, Vue and Nuxt, React Native, Flutter, Tailwind CSS, shadcn/ui, Ant Design.</dd>
-        </div>
-        <div>
-          <dt>Integrations</dt>
-          <dd>Stripe, MangoPay, RevenueCat, Google APIs (Auth, FCM, Calendar), Firebase, Algolia, Twilio, Brevo, Web3.js, ethers.js,
-            Thirdweb.</dd>
-        </div>
-      </dl>
-    </section>
-
-    <!-- Education & certificates -->
-    <section id="education" class="block">
-      <h2 class="block__title">Education &amp; certificates</h2>
-      <ul class="creds">
-        <li>
-          <h3>Top Notch 2 English certificate</h3>
-          <p>CEFR level B2</p>
-        </li>
-        <li>
-          <h3>FPT Polytechnic</h3>
-          <p>Software applications, 2016 – 2018. GPA 7.8/10.</p>
-        </li>
-      </ul>
-      <h3 class="subhead">Languages</h3>
-      <ul class="langs">
-        <li><span>Vietnamese</span><span>Native</span></li>
-        <li><span>English</span><span>Professional working proficiency (B2)</span></li>
       </ul>
     </section>
 

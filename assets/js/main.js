@@ -65,10 +65,6 @@
     links.forEach(function (a) { a.classList.toggle('is-active', a.getAttribute('data-spy') === id); });
   }
 
-  /* ---- download CV (print to PDF) ---- */
-  var print = document.getElementById('print-cv');
-  if (print) print.addEventListener('click', function () { window.print(); });
-
   /* ---- year ---- */
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();

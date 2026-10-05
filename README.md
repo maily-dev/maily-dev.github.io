@@ -8,7 +8,8 @@ One typeface (Schibsted Grotesk from Google Fonts), one accent colour, light/dar
 portfolio/
 ├── index.html              ← all content (edit text/projects here)
 ├── assets/css/styles.css   ← design system & layout
-├── assets/js/main.js        ← theme toggle, section highlight, print-to-PDF
+├── assets/js/main.js        ← theme toggle, section highlight
+├── Mai-Ly-CV.pdf            ← downloadable CV (regenerate after edits)
 ├── .nojekyll               ← tells GitHub Pages to serve files as-is
 └── README.md
 ```
@@ -22,8 +23,14 @@ python3 -m http.server 8080
 ```
 
 ## Download CV as PDF
-Click **Download CV** in the left column. It opens the browser print dialog,
-which is styled to produce a clean 1–2 page CV. Choose **Save as PDF**.
+**Download CV (PDF)** links to `Mai-Ly-CV.pdf` in the repo root. That file is the print version of
+`index.html` (see the `@media print` block in `styles.css`, about 3 A4 pages). Regenerate it after editing content:
+
+```bash
+python3 -m http.server 8765 &
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
+  --virtual-time-budget=5000 --print-to-pdf=Mai-Ly-CV.pdf http://localhost:8765/
+```
 
 ## What to edit before publishing
 Open `index.html` and update:

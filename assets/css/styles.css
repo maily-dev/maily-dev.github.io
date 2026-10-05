@@ -148,7 +148,7 @@ button { font: inherit; }
 
 .tools { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn {
-  appearance: none; cursor: pointer;
+  appearance: none; cursor: pointer; text-decoration: none; display: inline-block;
   border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
   padding: 8px 16px; border-radius: 999px;
   font-size: 14px; font-weight: 600;
@@ -263,6 +263,7 @@ button { font: inherit; }
 .job h3 { font-size: 19px; font-weight: 700; color: var(--ink); letter-spacing: -0.015em; line-height: 1.3; }
 .job__org { font-size: 15px; color: var(--muted); margin-bottom: 8px; }
 .job p:last-child { max-width: 66ch; }
+.job .proj__points { max-width: 66ch; }
 
 /* skills */
 .skills { display: flex; flex-direction: column; }
@@ -273,6 +274,7 @@ button { font: inherit; }
 .skills > div:first-child { border-top: 0; padding-top: 0; }
 .skills dt { font-size: 15px; font-weight: 700; color: var(--ink); }
 .skills dd { max-width: 64ch; }
+.skills > div.skills__core dd { color: var(--ink); font-weight: 600; }
 
 /* education & certificates */
 .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
@@ -336,35 +338,84 @@ button { font: inherit; }
 
 /* ---------- print / PDF ---------- */
 @media print {
-  @page { margin: 14mm 14mm 16mm; }
+  @page { size: A4; margin: 12mm 13mm 13mm; }
   :root, :root[data-theme="dark"] {
-    --bg: #fff; --surface: #fff; --ink: #000; --ink-2: #222; --muted: #555; --line: #ccc;
-    --accent: #1f2fa8; --live: #1a7a4c; --nutri-bg: #eef6f3; --tile: #fff;
+    --bg: #fff; --surface: #fff; --ink: #000; --ink-2: #1f1f1f; --muted: #555; --line: #d4d4d4;
+    --accent: #1f2fa8; --live: #1a7a4c; --nutri-bg: #fff; --tile: #fff;
   }
-  body { font-size: 10.5pt; line-height: 1.45; background: #fff; }
-  .page { display: block; padding: 0; max-width: none; }
-  .side { position: static; height: auto; overflow: visible; padding: 0 0 12pt; gap: 10pt; animation: none; }
+  html, body { background: #fff; }
+  body { font-size: 9pt; line-height: 1.4; }
   .side__top, .toc, .side__bottom, .main { animation: none !important; }
-  .name { font-size: 34pt; }
-  .role { margin-top: 6pt; font-size: 13pt; }
-  .pitch { max-width: none; font-size: 11pt; margin-top: 4pt; }
+  .page { display: block; padding: 0; max-width: none; }
+
+  .side { position: static; height: auto; overflow: visible; padding: 0 0 10pt; gap: 6pt; }
+  .name { font-size: 28pt; }
+  .role { margin-top: 4pt; font-size: 12pt; }
+  .pitch { max-width: none; font-size: 10pt; margin-top: 2pt; }
   .status, .toc, .tools, .skip, .foot { display: none; }
-  .contact { flex-direction: row; gap: 16pt; }
+  .contact { flex-direction: row; flex-wrap: wrap; gap: 3pt 14pt; font-size: 9pt; }
   .contact a { border: 0; }
+
   .main { padding: 0; }
-  .block { padding-bottom: 16pt; }
-  .block__title { font-size: 12pt; margin-bottom: 8pt; border-bottom: 1px solid #000; padding-bottom: 3pt; }
-  .lede { font-size: 11pt; }
-  .block__note { margin: 0 0 6pt; }
-  .lead-proj { border: 0; border-radius: 0; }
+  .block { padding-bottom: 8pt; }
+  .block__title { font-size: 11pt; margin-bottom: 6pt; border-bottom: 1px solid #000; padding-bottom: 2pt; }
+  .block__note { display: none; }
+
+  .about { gap: 5pt; max-width: none; }
+  .lede { font-size: 9.5pt; line-height: 1.4; color: var(--ink-2); }
+  .about p { max-width: none; }
+  .facts { display: none; }
+  .facts dt { font-size: 8pt; }
+  .facts dd { font-size: 9pt; }
+
+  .skills > div, .langs li { grid-template-columns: 95pt 1fr; padding: 3pt 0; border-top: 0; }
+  .skills > div:first-child { padding-top: 0; }
+  .skills dt { font-size: 9pt; }
+  .skills dd { max-width: none; }
+
+  .creds { display: block; margin-bottom: 2pt; }
+  .creds li { border: 0; border-radius: 0; padding: 0 0 3pt; display: flex; gap: 6pt; align-items: baseline; }
+  .creds h3 { font-size: 9.5pt; margin: 0; }
+  .creds h3::after { content: ","; }
+  .creds p { font-size: 9pt; color: var(--ink-2); }
+  .subhead { font-size: 9.5pt; margin: 4pt 0 2pt; }
+
+  .job { grid-template-columns: 70pt 1fr; padding: 5pt 0; border-top: 0; }
+  .job h3 { font-size: 10.5pt; }
+  .job__org { font-size: 9pt; margin-bottom: 2pt; }
+  .job__when { font-size: 9pt; padding-top: 1pt; }
+  .job p:last-child, .job .proj__points { max-width: none; }
+
+  .proj__points { gap: 1pt; max-width: none; }
+  .proj__points li { padding-left: 10pt; }
+  .proj__points li::before { left: 0; }
+
+  .lead-proj { border: 0; border-radius: 0; margin: 0; }
   .lead-proj__brand { display: none; }
-  .lead-proj__body { padding: 0 0 10pt; }
-  .proj { padding: 10pt 0; grid-template-columns: 1fr; }
+  .lead-proj__body { padding: 0 0 6pt; gap: 3pt; }
+  .proj { grid-template-columns: 1fr; padding: 6pt 0; border-bottom: 0; }
+  .proj__body { gap: 3pt; }
   .logo { display: none; }
-  .proj__head h3 { font-size: 13pt; }
-  .proj, .others li, .job, .creds li { break-inside: avoid; }
-  .others li { padding: 8pt 0; }
+  .proj__head h3 { font-size: 10.5pt; }
+  .proj__role { font-size: 9pt; }
+  .proj__when, .proj__link { font-size: 8.5pt; }
+  .proj__link { color: #000; text-decoration: none; }
+  /* Paper copy keeps the bullets; the description paragraph is on the website. */
+  .proj__body > p:not(.proj__role):not(.proj__stack),
+  .lead-proj__body > p:not(.proj__role):not(.proj__stack) { display: none; }
+  .proj__stack { font-size: 8.5pt; }
+  .proj__body > p, .lead-proj__body > p { max-width: none; }
+  .projects .proj__points li:nth-child(n+3) { display: none; }
+
+  .others { grid-template-columns: 1fr 1fr 1fr; gap: 0 14pt; }
+  .others li { padding: 4pt 0; gap: 1pt; border-top: 0; }
+  .others__name { font-size: 9.5pt; }
   .others__name img { display: none; }
-  .proj__link { color: #000; }
-  .creds li { border-radius: 0; padding: 8pt 10pt; }
+  .others li > p:not(.proj__stack) { font-size: 8.5pt; }
+  .others .proj__stack { display: none; }
+  .others .proj__link { display: none; }
+
+  .jobs, .projects { display: block; }
+  .job, .proj, .lead-proj__body, .others li, .creds li { break-inside: avoid; }
+  .block__title { break-after: avoid; }
 }
