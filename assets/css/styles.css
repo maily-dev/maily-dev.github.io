@@ -99,6 +99,13 @@ button { font: inherit; }
   padding: 72px 0 40px;
   display: flex; flex-direction: column; gap: 40px;
 }
+.portrait {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 28px;
+  background: var(--line);
+}
 .name {
   font-size: clamp(64px, 7.4vw, 112px);
   font-weight: 800;
@@ -317,6 +324,7 @@ button { font: inherit; }
     padding: 48px 0 8px; gap: 28px;
   }
   .name { font-size: clamp(60px, 18vw, 96px); }
+  .portrait { width: 80px; height: 80px; margin-bottom: 22px; }
   .toc { display: none; }
   .side__bottom { margin-top: 0; }
   .main { padding-top: 48px; }
@@ -349,6 +357,8 @@ button { font: inherit; }
   .page { display: block; padding: 0; max-width: none; }
 
   .side { position: static; height: auto; overflow: visible; padding: 0 0 10pt; gap: 6pt; }
+  .side__top { position: relative; padding-right: 72pt; }
+  .portrait { position: absolute; top: 0; right: 0; width: 60pt; height: 60pt; margin: 0; }
   .name { font-size: 28pt; }
   .role { margin-top: 4pt; font-size: 12pt; }
   .pitch { max-width: none; font-size: 10pt; margin-top: 2pt; }
