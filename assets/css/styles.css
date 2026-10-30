@@ -96,8 +96,8 @@ button { font: inherit; }
   position: sticky; top: 0;
   height: 100vh; height: 100dvh;
   overflow-y: auto;
-  padding: 64px 0 32px;
-  display: flex; flex-direction: column; gap: 40px;
+  padding: 64px 0 24px;
+  display: flex; flex-direction: column; gap: 32px;
 }
 .ident { display: flex; align-items: center; gap: 18px; }
 .portrait {
@@ -152,9 +152,10 @@ button { font: inherit; }
 .contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
 .contact a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 .contact li { width: fit-content; }
+.contact__place { color: var(--muted); }
 
 .tools { display: flex; gap: 10px; flex-wrap: wrap; }
-.side__top .contact { margin-top: 24px; }
+.side__top .contact { margin-top: 20px; }
 .side__top .tools { margin-top: 20px; }
 .page { position: relative; }
 .theme { position: absolute; top: 24px; right: var(--gutter); z-index: 2; }
