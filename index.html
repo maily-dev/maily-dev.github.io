@@ -123,7 +123,7 @@
           what happens in production.</p>
         <dl class="facts">
           <div><dt>Experience</dt><dd>6+ years, since 2019</dd></div>
-          <div><dt>Commits</dt><dd>4,000+ across these products</dd></div>
+          <div><dt>Products</dt><dd>20+ at Digital Unicorn</dd></div>
           <div><dt>Based in</dt><dd>Vietnam</dd></div>
         </dl>
       </div>
@@ -200,7 +200,7 @@
             <p class="job__org">Digital Unicorn Co., Ltd, full-time</p>
             <ul class="proj__points">
               <li>Lead engineer on Nutrissimo, a realtime multiplayer game for Institut Pasteur de Lille that launches inside Moodle through LTI 1.3.</li>
-              <li>Backend lead on NightPass ticketing (59% of commits). Fixed a Redis out-of-memory incident and made rolling deploys safe during live events.</li>
+              <li>Backend lead on NightPass ticketing. Fixed a Redis out-of-memory incident and made rolling deploys safe during live events.</li>
               <li>Built AI products end to end: Days Legacy, RP Tech AI, SparkPlan with its voice agents, and CLS AI.</li>
               <li>Own architecture, delivery and production reliability, and I'm often the top contributor to the codebase.</li>
             </ul>
@@ -212,8 +212,8 @@
             <h3>Backend and full-stack engineer</h3>
             <p class="job__org">Digital Unicorn Co., Ltd, full-time</p>
             <ul class="proj__points">
-              <li>Main backend engineer on WeShake (715 commits, Stripe and MangoPay payments) and OOVOOM (404 commits, ran the AWS EKS and Helm deployments).</li>
-              <li>Lead backend engineer on BeParentalis (78% of commits) and RP Tech AI (98% of commits).</li>
+              <li>Main backend engineer on WeShake (Stripe and MangoPay payments) and OOVOOM (ran the AWS EKS and Helm deployments).</li>
+              <li>Lead backend engineer on BeParentalis and RP Tech AI.</li>
               <li>Also built DeliverLIB, Just Meat, Raisy, Kibo and CyLimit: payments, realtime features, token vesting and role-based access.</li>
             </ul>
           </div>
@@ -241,7 +241,6 @@
     <!-- Selected work -->
     <section id="work" class="block">
       <h2 class="block__title">Selected work</h2>
-      <p class="block__note">Commit counts and authorship shares come from each repository's git history.</p>
 
       <!-- Nutrissimo (current) -->
       <article class="lead-proj">
@@ -258,7 +257,7 @@
             move across a live game board, with a spectator mode and authoring tools for teachers. Rolling out to schools across France,
             around 3,000 students so far.</p>
           <ul class="proj__points">
-            <li>352 commits across a Turborepo with a Flutter app, a Next.js admin and Supabase.</li>
+            <li>Built across the whole Turborepo: the Flutter app, the Next.js admin and Supabase.</li>
             <li>Built the server-authoritative game engine: presence, reconnection after a dropped connection, and idempotent state updates.</li>
             <li>Implemented LTI 1.3 single sign-on so the game launches straight from Moodle.</li>
           </ul>
@@ -278,7 +277,6 @@
             <p>Multi-tenant ticketing: events, bookings, Stripe payments, Apple Wallet passes, and QR scanning at the door that replays
               offline scans. I owned the backend and kept it up during live events.</p>
             <ul class="proj__points">
-              <li>579 commits, 59% of the repository.</li>
               <li>Traced a production out-of-memory incident to a Redis reconnect storm; fixed the config and added leader locks so rolling deploys don't drop traffic.</li>
               <li>Reworked the QR scan path (back-pressure, compare-and-set writes, readiness probes) to stay fast with many doors scanning at once.</li>
             </ul>
@@ -300,7 +298,7 @@
             <p>A budget advisor that turns a free-text project brief into a structured estimate, embedded as a widget on the Sortlist
               marketplace. SparkPlan Voice adds phone agents that qualify leads in real time.</p>
             <ul class="proj__points">
-              <li>Wrote most of the integration backend, up to 94% of commits in some services.</li>
+              <li>Wrote most of the integration backend.</li>
               <li>Built the OpenAI, LangChain and ChromaDB pipeline: prompts, routing between GPT-4o, GPT-4 and GPT-3.5, and answers in the user's language across five EU locales.</li>
               <li>Built the voice agents (telephony plus WebSocket streaming) and the report pipeline from conversation to emailed report.</li>
             </ul>
@@ -336,7 +334,7 @@
             <p>Transcription, real-time translation, AI chat and a legal-advice assistant, sold as Stripe subscriptions through a web app
               and a browser extension.</p>
             <ul class="proj__points">
-              <li>Built the backend almost alone: 254 commits, 98% authorship.</li>
+              <li>Built the backend almost alone.</li>
               <li>Combined four providers in one service: OpenAI, Rev for speech-to-text, Ordalie for legal answers and DeepL for translation, with LangChain and ChromaDB for retrieval.</li>
               <li>Built tiered subscriptions with usage tracking, and the API behind the browser extension.</li>
             </ul>
@@ -353,7 +351,7 @@
             <p class="proj__role">Lead backend engineer, parenting app reviewed by pediatricians. About 20k downloads, rated 4.6.</p>
             <p>Medical guidance, symptom orientation, doctor profiles and short lessons for parents, on iOS and Android.</p>
             <ul class="proj__points">
-              <li>247 commits, 78% of the repository. Designed the data model linking doctors, families, lessons and subscriptions.</li>
+              <li>Designed the data model linking doctors, families, lessons and subscriptions.</li>
               <li>Integrated Algolia search and RevenueCat for in-app subscriptions on both stores.</li>
               <li>Built family sub-accounts and sanitized user-written medical content.</li>
             </ul>
@@ -371,7 +369,6 @@
             <p class="proj__role">Senior backend engineer, peer-to-peer payments and cards. About 12k users.</p>
             <p>Money transfers between friends, payment cards, referrals and campaigns. My largest project by contribution.</p>
             <ul class="proj__points">
-              <li>715 commits.</li>
               <li>Integrated two payment processors, Stripe and MangoPay, with payment links, recurring billing and webhooks.</li>
               <li>Shipped GDPR data deletion, multi-device login with OTP, and the referral and bonus system.</li>
             </ul>
@@ -389,7 +386,6 @@
             <p class="proj__role">Backend developer and DevOps, ERP for a garage network. 100+ partner garages, about 6k users.</p>
             <p>Connects car owners with garages: appointments, quotes, invoices and repair jobs across a franchise network.</p>
             <ul class="proj__points">
-              <li>404 commits over two years, 52% of the core API.</li>
               <li>Designed role-based access for owners, garage staff, network staff and admins.</li>
               <li>Automated quotes and invoices, and ran the AWS EKS and Helm deployment pipeline.</li>
             </ul>
@@ -424,22 +420,22 @@
         </li>
         <li>
           <div class="others__name">Profiler Connection and Raisy</div>
-          <p>Matchmaking app plus a Web3 deal platform, about 5k users. I built the token vesting engine (TGE, cliffs, linear release) and investor cap tables. 81 commits, 57%.</p>
+          <p>Matchmaking app plus a Web3 deal platform, about 5k users. I built the token vesting engine (TGE, cliffs, linear release) and investor cap tables.</p>
           <p class="proj__stack">NestJS, MongoDB, Web3.js, ExcelJS, Firebase</p>
         </li>
         <li>
           <div class="others__name">DeliverLIB</div>
-          <p>Food delivery marketplace with shops, catalogues, live order tracking and dynamic delivery pricing. 249 commits, 75%.</p>
+          <p>Food delivery marketplace with shops, catalogues, live order tracking and dynamic delivery pricing.</p>
           <p class="proj__stack">Node.js, MySQL, Socket.IO, Stripe, MangoPay</p>
         </li>
         <li>
           <div class="others__name">Just Meat</div>
-          <p>Online butcher with nested categories, courier assignment and scheduled delivery slots. 246 commits, 72%.</p>
+          <p>Online butcher with nested categories, courier assignment and scheduled delivery slots.</p>
           <p class="proj__stack">Node.js, MySQL, Sequelize, FCM</p>
         </li>
         <li>
           <div class="others__name">Venues</div>
-          <p>Venue management with Elasticsearch search, bookings that handle time zones, and an ArgoCD deployment on Kubernetes. 226 commits.</p>
+          <p>Venue management with Elasticsearch search, bookings that handle time zones, and an ArgoCD deployment on Kubernetes.</p>
           <p class="proj__stack">NestJS, TypeORM, Elasticsearch, ArgoCD</p>
         </li>
         <li>
