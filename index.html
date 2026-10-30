@@ -68,7 +68,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&display=swap" />
-<link rel="stylesheet" href="assets/css/styles.css?v=20261030d" />
+<link rel="stylesheet" href="assets/css/styles.css?v=20261030g" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e3fd0'/><text x='50' y='69' font-size='56' font-family='Arial,sans-serif' font-weight='800' fill='white' text-anchor='middle'>ML</text></svg>" />
 </head>
 <body>
@@ -79,8 +79,10 @@
   <!-- ============ SIDEBAR / IDENTITY ============ -->
   <header class="side">
     <div class="side__top">
-      <img class="portrait" src="assets/img/a-mai-ly.jpg" alt="A Mai Ly" width="500" height="500" fetchpriority="high" />
-      <h1 class="name">A Mai Ly</h1>
+      <div class="ident">
+        <img class="portrait" src="assets/img/a-mai-ly.jpg" alt="A Mai Ly" width="500" height="500" fetchpriority="high" />
+        <h1 class="name">A Mai Ly</h1>
+      </div>
       <p class="role">Senior full-stack &amp; backend engineer</p>
       <p class="pitch">I build products end to end for European teams, with most of my depth in the backend: APIs, realtime systems and AI features that stay up in production.</p>
       <p class="status"><span class="status__dot" aria-hidden="true"></span>Open to senior full-stack roles, hybrid or on-site in Vietnam</p>
@@ -102,11 +104,12 @@
       <a href="#skills" data-spy="skills">Skills</a>
       <a href="#education" data-spy="education">Education &amp; certificates</a>
     </nav>
-
-    <div class="side__foot">
-      <button type="button" class="btn btn--quiet" id="theme-toggle" aria-pressed="false">Dark mode</button>
-    </div>
   </header>
+
+  <div class="theme">
+    <button type="button" class="btn btn--quiet" id="theme-toggle" aria-pressed="false">Dark mode</button>
+  </div>
+
 
   <!-- ============ CONTENT ============ -->
   <main id="content" class="main">

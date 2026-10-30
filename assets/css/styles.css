@@ -96,26 +96,27 @@ button { font: inherit; }
   position: sticky; top: 0;
   height: 100vh; height: 100dvh;
   overflow-y: auto;
-  padding: 72px 0 40px;
+  padding: 64px 0 32px;
   display: flex; flex-direction: column; gap: 40px;
 }
+.ident { display: flex; align-items: center; gap: 18px; }
 .portrait {
-  width: 96px; height: 96px;
+  flex: none;
+  width: 76px; height: 76px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 28px;
   background: var(--line);
 }
 .name {
-  font-size: clamp(64px, 7.4vw, 112px);
+  font-size: clamp(44px, 4.4vw, 64px);
   font-weight: 800;
-  line-height: 0.86;
+  line-height: 0.95;
   letter-spacing: -0.055em;
   color: var(--ink);
   margin-left: -0.04em;
 }
 .role {
-  margin-top: 20px;
+  margin-top: 22px;
   font-size: 21px; font-weight: 600; letter-spacing: -0.01em;
   color: var(--ink);
 }
@@ -155,7 +156,8 @@ button { font: inherit; }
 .tools { display: flex; gap: 10px; flex-wrap: wrap; }
 .side__top .contact { margin-top: 24px; }
 .side__top .tools { margin-top: 20px; }
-.side__foot { margin-top: auto; }
+.page { position: relative; }
+.theme { position: absolute; top: 24px; right: var(--gutter); z-index: 2; }
 .btn {
   appearance: none; cursor: pointer; text-decoration: none; display: inline-block;
   border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
@@ -324,10 +326,10 @@ button { font: inherit; }
     position: static; height: auto; overflow: visible;
     padding: 48px 0 8px; gap: 28px;
   }
-  .name { font-size: clamp(60px, 18vw, 96px); }
-  .portrait { width: 80px; height: 80px; margin-bottom: 22px; }
-  .side { position: relative; }
-  .side__foot { position: absolute; top: 48px; right: 0; margin: 0; }
+  .ident { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .portrait { width: 72px; height: 72px; }
+  .name { font-size: clamp(48px, 14vw, 64px); }
+  .theme { top: 48px; }
   .toc { display: none; }
   .main { padding-top: 48px; }
   .block { padding-bottom: 64px; }
@@ -364,7 +366,7 @@ button { font: inherit; }
   .name { font-size: 28pt; }
   .role { margin-top: 4pt; font-size: 12pt; }
   .pitch { max-width: none; font-size: 10pt; margin-top: 2pt; }
-  .status, .toc, .tools, .side__foot, .skip, .foot { display: none; }
+  .status, .toc, .tools, .theme, .skip, .foot { display: none; }
   .contact { flex-direction: row; flex-wrap: wrap; gap: 3pt 14pt; font-size: 9pt; }
   .contact a { border: 0; }
 
