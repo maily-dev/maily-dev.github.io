@@ -68,7 +68,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&display=swap" />
-<link rel="stylesheet" href="assets/css/styles.css?v=20261030" />
+<link rel="stylesheet" href="assets/css/styles.css?v=20261030c" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232e3fd0'/><text x='50' y='69' font-size='56' font-family='Arial,sans-serif' font-weight='800' fill='white' text-anchor='middle'>ML</text></svg>" />
 </head>
 <body>
@@ -84,18 +84,6 @@
       <p class="role">Senior full-stack &amp; backend engineer</p>
       <p class="pitch">I build products end to end for European teams, with most of my depth in the backend: APIs, realtime systems and AI features that stay up in production.</p>
       <p class="status"><span class="status__dot" aria-hidden="true"></span>Open to senior full-stack roles, hybrid or on-site in Vietnam</p>
-    </div>
-
-    <nav class="toc" aria-label="Sections">
-      <a href="#about" data-spy="about">About</a>
-      <a href="#skills" data-spy="skills">Skills</a>
-      <a href="#education" data-spy="education">Education &amp; certificates</a>
-      <a href="#experience" data-spy="experience">Experience</a>
-      <a href="#work" data-spy="work">Selected work</a>
-      <a href="#more" data-spy="more">Other projects</a>
-    </nav>
-
-    <div class="side__bottom">
       <ul class="contact">
         <li><a href="mailto:mailypd02033@gmail.com">mailypd02033@gmail.com</a></li>
         <li><a href="https://github.com/maily-dev" target="_blank" rel="noopener">github.com/maily-dev</a></li>
@@ -106,6 +94,15 @@
         <button type="button" class="btn btn--quiet" id="theme-toggle" aria-pressed="false">Dark mode</button>
       </div>
     </div>
+
+    <nav class="toc" aria-label="Sections">
+      <a href="#about" data-spy="about">About</a>
+      <a href="#experience" data-spy="experience">Experience</a>
+      <a href="#work" data-spy="work">Selected work</a>
+      <a href="#more" data-spy="more">Other projects</a>
+      <a href="#skills" data-spy="skills">Skills</a>
+      <a href="#education" data-spy="education">Education &amp; certificates</a>
+    </nav>
   </header>
 
   <!-- ============ CONTENT ============ -->
@@ -129,66 +126,6 @@
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="block">
-      <h2 class="block__title">Skills</h2>
-      <dl class="skills">
-        <div class="skills__core">
-          <dt>Core stack</dt>
-          <dd>TypeScript, Node.js, NestJS, React, Next.js, Flutter, PostgreSQL, MongoDB, Redis, GraphQL, Docker, Kubernetes, AWS</dd>
-        </div>
-        <div>
-          <dt>Backend</dt>
-          <dd>NestJS, Node.js, Express, AdonisJS, TypeScript. REST, GraphQL (Apollo, Hasura), gRPC, WebSockets, SSE, Socket.IO.
-            Microservices, event-driven design, queues (BullMQ, Kafka), CQRS and DDD, OAuth2, JWT, RBAC, webhooks, rate limiting,
-            caching, observability.</dd>
-        </div>
-        <div>
-          <dt>Front end and mobile</dt>
-          <dd>React, Next.js 14 and 15, Vue and Nuxt, React Native, Flutter, Tailwind CSS, shadcn/ui, Ant Design.</dd>
-        </div>
-        <div>
-          <dt>AI and voice</dt>
-          <dd>OpenAI (GPT-4, 4o, 5; Assistants), Azure OpenAI, LangChain, ChromaDB and RAG, Retell AI, Deepgram, ElevenLabs, DeepL,
-            prompt design.</dd>
-        </div>
-        <div>
-          <dt>Data</dt>
-          <dd>PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch, Supabase. Prisma, TypeORM, Sequelize, Mongoose.</dd>
-        </div>
-        <div>
-          <dt>Cloud and DevOps</dt>
-          <dd>AWS (EC2, ECS, EKS, Lambda, S3, SES, CloudFront, Route 53), Azure (AKS, Pipelines), Cloudflare, Docker, Kubernetes,
-            Helm, ArgoCD, GitLab CI, Nginx, PM2.</dd>
-        </div>
-        <div>
-          <dt>Integrations</dt>
-          <dd>Stripe, MangoPay, RevenueCat, Google APIs (Auth, FCM, Calendar), Firebase, Algolia, Twilio, Brevo, Web3.js, ethers.js,
-            Thirdweb.</dd>
-        </div>
-      </dl>
-    </section>
-
-    <!-- Education & certificates -->
-    <section id="education" class="block">
-      <h2 class="block__title">Education &amp; certificates</h2>
-      <ul class="creds">
-        <li>
-          <h3>Top Notch 2 English certificate</h3>
-          <p>CEFR level B2</p>
-        </li>
-        <li>
-          <h3>FPT Polytechnic</h3>
-          <p>Software applications, 2016 – 2018. GPA 7.8/10.</p>
-        </li>
-      </ul>
-      <h3 class="subhead">Languages</h3>
-      <ul class="langs">
-        <li><span>Vietnamese</span><span>Native</span></li>
-        <li><span>English</span><span>Professional working proficiency (B2)</span></li>
-      </ul>
-    </section>
-
     <!-- Experience -->
     <section id="experience" class="block">
       <h2 class="block__title">Experience</h2>
@@ -200,9 +137,9 @@
             <p class="job__org">Digital Unicorn Co., Ltd, full-time</p>
             <ul class="proj__points">
               <li>Lead engineer on Nutrissimo, a realtime multiplayer game for Institut Pasteur de Lille that launches inside Moodle through LTI 1.3.</li>
-              <li>Backend lead on NightPass ticketing. Fixed a Redis out-of-memory incident and made rolling deploys safe during live events.</li>
+              <li>Kept NightPass ticketing up during live events as backend lead: fixed a Redis out-of-memory incident and made rolling deploys safe.</li>
               <li>Built AI products end to end: Days Legacy, RP Tech AI, SparkPlan with its voice agents, and CLS AI.</li>
-              <li>Own architecture, delivery and production reliability, and I'm often the top contributor to the codebase.</li>
+              <li>Own architecture, delivery and production reliability on the projects I lead.</li>
             </ul>
           </div>
         </li>
@@ -213,7 +150,7 @@
             <p class="job__org">Digital Unicorn Co., Ltd, full-time</p>
             <ul class="proj__points">
               <li>Main backend engineer on WeShake (Stripe and MangoPay payments) and OOVOOM (ran the AWS EKS and Helm deployments).</li>
-              <li>Lead backend engineer on BeParentalis and RP Tech AI.</li>
+              <li>Lead backend engineer on BeParentalis, a parenting app with about 20k downloads, and on RP Tech AI.</li>
               <li>Also built DeliverLIB, Just Meat, Raisy, Kibo and CyLimit: payments, realtime features, token vesting and role-based access.</li>
             </ul>
           </div>
@@ -257,9 +194,9 @@
             move across a live game board, with a spectator mode and authoring tools for teachers. Rolling out to schools across France,
             around 3,000 students so far.</p>
           <ul class="proj__points">
-            <li>Built across the whole Turborepo: the Flutter app, the Next.js admin and Supabase.</li>
-            <li>Built the server-authoritative game engine: presence, reconnection after a dropped connection, and idempotent state updates.</li>
-            <li>Implemented LTI 1.3 single sign-on so the game launches straight from Moodle.</li>
+            <li>Built the server-authoritative game engine, so a class keeps playing through dropped connections: presence, reconnection and idempotent state updates.</li>
+            <li>Implemented LTI 1.3 single sign-on so the game launches straight from a Moodle course, with no separate account.</li>
+            <li>Work across the whole Turborepo: the Flutter app, the Next.js admin and Supabase.</li>
           </ul>
           <p class="proj__stack">Flutter, Next.js 15, Supabase Realtime, Turborepo, LTI 1.3, Cloudflare</p>
         </div>
@@ -277,8 +214,8 @@
             <p>Multi-tenant ticketing: events, bookings, Stripe payments, Apple Wallet passes, and QR scanning at the door that replays
               offline scans. I owned the backend and kept it up during live events.</p>
             <ul class="proj__points">
-              <li>Traced a production out-of-memory incident to a Redis reconnect storm; fixed the config and added leader locks so rolling deploys don't drop traffic.</li>
-              <li>Reworked the QR scan path (back-pressure, compare-and-set writes, readiness probes) to stay fast with many doors scanning at once.</li>
+              <li>Stopped a production out-of-memory crash: traced it to a Redis reconnect storm, fixed the config and added leader locks so rolling deploys no longer drop traffic.</li>
+              <li>Kept entry fast with many doors scanning at once by reworking the QR scan path: back-pressure, compare-and-set writes and readiness probes.</li>
             </ul>
             <p class="proj__stack">NestJS, GraphQL, Prisma, PostgreSQL, Redis, BullMQ, Stripe, AWS ECS</p>
           </div>
@@ -298,29 +235,11 @@
             <p>A budget advisor that turns a free-text project brief into a structured estimate, embedded as a widget on the Sortlist
               marketplace. SparkPlan Voice adds phone agents that qualify leads in real time.</p>
             <ul class="proj__points">
-              <li>Wrote most of the integration backend.</li>
-              <li>Built the OpenAI, LangChain and ChromaDB pipeline: prompts, routing between GPT-4o, GPT-4 and GPT-3.5, and answers in the user's language across five EU locales.</li>
-              <li>Built the voice agents (telephony plus WebSocket streaming) and the report pipeline from conversation to emailed report.</li>
+              <li>Built the OpenAI, LangChain and ChromaDB pipeline that turns a brief into an estimate, routing between GPT-4o, GPT-4 and GPT-3.5 and answering in five EU languages.</li>
+              <li>Built the voice agents that qualify leads by phone, from telephony and WebSocket streaming to the emailed report.</li>
+              <li>Wrote most of the backend that embeds the advisor as a widget on Sortlist.</li>
             </ul>
             <p class="proj__stack">NestJS, OpenAI, Azure OpenAI, LangChain, ChromaDB, WebSocket, MongoDB, Stripe</p>
-          </div>
-        </li>
-
-        <li class="proj">
-          <span class="logo logo--initials" aria-hidden="true">CL</span>
-          <div class="proj__body">
-            <div class="proj__head">
-              <h3>CLS AI for Promecano</h3>
-            </div>
-            <p class="proj__role">AI and backend engineer, voice assistant for industrial IoT diagnostics.</p>
-            <p>Technicians call a voice agent or chat (with photos) to diagnose machine error codes. Answers come from a knowledge base
-              specific to each device.</p>
-            <ul class="proj__points">
-              <li>Connected Retell AI voice to OpenAI Assistants with one vector store per device.</li>
-              <li>Streamed tool status to the client over WebSockets and moved slow work to Bull queues with caching to keep latency low.</li>
-              <li>Added image-aware chat and diagnostics across several devices in a fleet.</li>
-            </ul>
-            <p class="proj__stack">NestJS, OpenAI, Retell AI, vector search, WebSockets, MongoDB, Kubernetes</p>
           </div>
         </li>
 
@@ -334,28 +253,11 @@
             <p>Transcription, real-time translation, AI chat and a legal-advice assistant, sold as Stripe subscriptions through a web app
               and a browser extension.</p>
             <ul class="proj__points">
-              <li>Built the backend almost alone.</li>
-              <li>Combined four providers in one service: OpenAI, Rev for speech-to-text, Ordalie for legal answers and DeepL for translation, with LangChain and ChromaDB for retrieval.</li>
-              <li>Built tiered subscriptions with usage tracking, and the API behind the browser extension.</li>
+              <li>Put four AI providers behind one API: OpenAI, Rev for speech-to-text, Ordalie for legal answers and DeepL for translation, with LangChain and ChromaDB for retrieval.</li>
+              <li>Built paid tiers with usage tracking on Stripe, and the API behind the browser extension.</li>
+              <li>Designed and built almost all of the backend myself.</li>
             </ul>
             <p class="proj__stack">NestJS, OpenAI, Rev, DeepL, Ordalie, LangChain, ChromaDB, MongoDB, Stripe</p>
-          </div>
-        </li>
-
-        <li class="proj">
-          <span class="logo logo--initials" aria-hidden="true">BP</span>
-          <div class="proj__body">
-            <div class="proj__head">
-              <h3>BeParentalis</h3>
-            </div>
-            <p class="proj__role">Lead backend engineer, parenting app reviewed by pediatricians. About 20k downloads, rated 4.6.</p>
-            <p>Medical guidance, symptom orientation, doctor profiles and short lessons for parents, on iOS and Android.</p>
-            <ul class="proj__points">
-              <li>Designed the data model linking doctors, families, lessons and subscriptions.</li>
-              <li>Integrated Algolia search and RevenueCat for in-app subscriptions on both stores.</li>
-              <li>Built family sub-accounts and sanitized user-written medical content.</li>
-            </ul>
-            <p class="proj__stack">NestJS, MySQL, TypeORM, Algolia, RevenueCat, Firebase, Brevo</p>
           </div>
         </li>
 
@@ -369,30 +271,12 @@
             <p class="proj__role">Senior backend engineer, peer-to-peer payments and cards. About 12k users.</p>
             <p>Money transfers between friends, payment cards, referrals and campaigns. My largest project by contribution.</p>
             <ul class="proj__points">
-              <li>Integrated two payment processors, Stripe and MangoPay, with payment links, recurring billing and webhooks.</li>
+              <li>Moved money through two processors, Stripe and MangoPay: transfers, payment links, recurring billing and webhooks.</li>
               <li>Shipped GDPR data deletion, multi-device login with OTP, and the referral and bonus system.</li>
             </ul>
             <p class="proj__stack">Node.js, Express, MySQL, Sequelize, Stripe, MangoPay, Socket.IO, Twilio, AWS, Kubernetes</p>
           </div>
         </li>
-
-        <li class="proj">
-          <span class="logo logo--crop"><img src="assets/img/oovoom.png" alt="" /></span>
-          <div class="proj__body">
-            <div class="proj__head">
-              <h3>OOVOOM</h3>
-              <a class="proj__link" href="https://oovoom.com" target="_blank" rel="noopener">oovoom.com</a>
-            </div>
-            <p class="proj__role">Backend developer and DevOps, ERP for a garage network. 100+ partner garages, about 6k users.</p>
-            <p>Connects car owners with garages: appointments, quotes, invoices and repair jobs across a franchise network.</p>
-            <ul class="proj__points">
-              <li>Designed role-based access for owners, garage staff, network staff and admins.</li>
-              <li>Automated quotes and invoices, and ran the AWS EKS and Helm deployment pipeline.</li>
-            </ul>
-            <p class="proj__stack">Node.js, Express, MySQL, Sequelize, Elasticsearch, Algolia, AWS EKS, Helm, Stripe</p>
-          </div>
-        </li>
-
       </ol>
     </section>
 
@@ -401,54 +285,101 @@
       <h2 class="block__title">Other projects</h2>
       <ul class="others">
         <li>
-          <div class="others__name"><img src="assets/img/dayslegacy.png" alt="" />Days Legacy (DSL)</div>
-          <p>AI advisor for wealth and legacy planning. It combines a user's portfolio with live financial news to answer planning and risk questions. Full-stack, 2024.</p>
-          <p class="proj__stack">NestJS, Hasura, GraphQL, OpenAI, PostgreSQL, Redis, React</p>
+          <div class="others__name">CLS AI for Promecano</div>
+          <p>Voice and chat assistant that diagnoses industrial machine errors from a knowledge base for each device.</p>
+        </li>
+        <li>
+          <div class="others__name">BeParentalis</div>
+          <p>Parenting app reviewed by pediatricians, about 20k downloads. Lead backend: data model, Algolia search, RevenueCat subscriptions.</p>
+        </li>
+        <li>
+          <div class="others__name">OOVOOM</div>
+          <p>ERP for 100+ partner garages. Role-based access, automated quotes and invoices, AWS EKS and Helm deployments.</p>
+          <a class="proj__link" href="https://oovoom.com" target="_blank" rel="noopener">oovoom.com</a>
+        </li>
+        <li>
+          <div class="others__name"><img src="assets/img/dayslegacy.png" alt="" />Days Legacy</div>
+          <p>AI advisor that combines a user's portfolio with live financial news to answer wealth and legacy planning questions.</p>
           <a class="proj__link" href="https://www.dayslegacy.com" target="_blank" rel="noopener">dayslegacy.com</a>
         </li>
         <li>
-          <div class="others__name"><img src="assets/img/cylimit.png" alt="" />CyLimit</div>
-          <p>Fantasy cycling with rider NFTs that earn from real race results. I built the server-sent announcements, notifications and media pipeline.</p>
-          <p class="proj__stack">NestJS, GraphQL, ethers.js, SSE, S3</p>
-          <a class="proj__link" href="https://cylimit.com/en/" target="_blank" rel="noopener">cylimit.com</a>
-        </li>
-        <li>
           <div class="others__name"><img src="assets/img/eddwin.png" alt="" />Eddwin</div>
-          <p>Marketplace for training courses. I built the multilingual Next.js front end, onboarding for learners and trainers, Bull email automation and Stripe billing for five trainer tiers.</p>
-          <p class="proj__stack">NestJS, Next.js 14, Bull, Redis, Stripe, Socket.IO, MongoDB</p>
+          <p>Training course marketplace: multilingual Next.js front end, onboarding, email automation and Stripe billing.</p>
           <a class="proj__link" href="https://formation.eddwin.fr" target="_blank" rel="noopener">formation.eddwin.fr</a>
         </li>
         <li>
+          <div class="others__name"><img src="assets/img/cylimit.png" alt="" />CyLimit</div>
+          <p>Fantasy cycling with rider NFTs. I built the live announcements, notifications and media pipeline.</p>
+          <a class="proj__link" href="https://cylimit.com/en/" target="_blank" rel="noopener">cylimit.com</a>
+        </li>
+        <li>
           <div class="others__name">Profiler Connection and Raisy</div>
-          <p>Matchmaking app plus a Web3 deal platform, about 5k users. I built the token vesting engine (TGE, cliffs, linear release) and investor cap tables.</p>
-          <p class="proj__stack">NestJS, MongoDB, Web3.js, ExcelJS, Firebase</p>
+          <p>Matchmaking and Web3 deal platform, about 5k users. I built token vesting and investor cap tables.</p>
         </li>
         <li>
           <div class="others__name">DeliverLIB</div>
-          <p>Food delivery marketplace with shops, catalogues, live order tracking and dynamic delivery pricing.</p>
-          <p class="proj__stack">Node.js, MySQL, Socket.IO, Stripe, MangoPay</p>
+          <p>Food delivery marketplace with live order tracking and dynamic delivery pricing.</p>
         </li>
         <li>
           <div class="others__name">Just Meat</div>
-          <p>Online butcher with nested categories, courier assignment and scheduled delivery slots.</p>
-          <p class="proj__stack">Node.js, MySQL, Sequelize, FCM</p>
+          <p>Online butcher with courier assignment and scheduled delivery slots.</p>
         </li>
         <li>
           <div class="others__name">Venues</div>
-          <p>Venue management with Elasticsearch search, bookings that handle time zones, and an ArgoCD deployment on Kubernetes.</p>
-          <p class="proj__stack">NestJS, TypeORM, Elasticsearch, ArgoCD</p>
+          <p>Venue bookings across time zones, Elasticsearch search, ArgoCD on Kubernetes.</p>
         </li>
         <li>
           <div class="others__name">Kibo Finance</div>
-          <p>Loyalty backend for a Web3 app: points, leaderboards, referral codes and on-chain checks.</p>
-          <p class="proj__stack">NestJS, MongoDB, Web3.js</p>
+          <p>Web3 loyalty backend: points, leaderboards, referrals and on-chain checks.</p>
         </li>
         <li>
           <div class="others__name">ICF Crawler</div>
-          <p>Crawler that collects listings from 100+ luxury fashion stores, handling bot protection and reCAPTCHA.</p>
-          <p class="proj__stack">Puppeteer, Express, PM2</p>
+          <p>Crawler for listings from 100+ luxury fashion stores, past bot protection and reCAPTCHA.</p>
           <a class="proj__link" href="https://crawl.itscalledfashion.com" target="_blank" rel="noopener">crawl.itscalledfashion.com</a>
         </li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="block">
+      <h2 class="block__title">Skills</h2>
+      <dl class="skills">
+        <div class="skills__core">
+          <dt>Core stack</dt>
+          <dd>TypeScript, Node.js, NestJS, React, Next.js, Flutter, PostgreSQL, MongoDB, Redis, GraphQL, Docker, Kubernetes, AWS</dd>
+        </div>
+        <div>
+          <dt>Backend</dt>
+          <dd>REST and GraphQL APIs, WebSockets and SSE, microservices with queues (BullMQ, Kafka), OAuth2 and RBAC, Stripe and MangoPay payments.</dd>
+        </div>
+        <div>
+          <dt>AI and voice</dt>
+          <dd>OpenAI and Azure OpenAI, LangChain, RAG with ChromaDB, Retell AI and ElevenLabs voice agents.</dd>
+        </div>
+        <div>
+          <dt>Cloud and DevOps</dt>
+          <dd>AWS (ECS, EKS, Lambda, S3), Azure AKS, Helm, ArgoCD, GitLab CI, Cloudflare.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Education & certificates -->
+    <section id="education" class="block">
+      <h2 class="block__title">Education &amp; certificates</h2>
+      <ul class="creds">
+        <li>
+          <h3>Top Notch 2 English certificate</h3>
+          <p>CEFR level B2</p>
+        </li>
+        <li>
+          <h3>FPT Polytechnic</h3>
+          <p>Software applications, 2016 – 2018. GPA 7.8/10.</p>
+        </li>
+      </ul>
+      <h3 class="subhead">Languages</h3>
+      <ul class="langs">
+        <li><span>Vietnamese</span><span>Native</span></li>
+        <li><span>English</span><span>Professional working proficiency (B2)</span></li>
       </ul>
     </section>
 

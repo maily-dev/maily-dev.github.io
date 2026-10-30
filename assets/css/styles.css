@@ -147,13 +147,14 @@ button { font: inherit; }
 .toc a.is-active { color: var(--ink); }
 .toc a.is-active::before { width: 48px; opacity: 1; background: var(--accent); }
 
-.side__bottom { margin-top: auto; display: flex; flex-direction: column; gap: 20px; }
 .contact { display: flex; flex-direction: column; gap: 4px; font-size: 15px; }
 .contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
 .contact a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 .contact li { width: fit-content; }
 
 .tools { display: flex; gap: 10px; flex-wrap: wrap; }
+.side__top .contact { margin-top: 24px; }
+.side__top .tools { margin-top: 20px; }
 .btn {
   appearance: none; cursor: pointer; text-decoration: none; display: inline-block;
   border: 1px solid var(--ink); background: var(--ink); color: var(--bg);
@@ -248,15 +249,15 @@ button { font: inherit; }
 /* other projects */
 .others { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
 .others li {
-  display: flex; flex-direction: column; gap: 8px;
-  padding: 24px 0; border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 18px 0; border-top: 1px solid var(--line);
 }
 .others__name {
   display: flex; align-items: center; gap: 10px;
   font-size: 17px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em;
 }
 .others__name img { width: 20px; height: 20px; border-radius: 5px; }
-.others li > p:not(.proj__stack) { font-size: 15px; }
+.others li > p { font-size: 15px; }
 .others .proj__link { width: fit-content; }
 
 /* experience */
@@ -302,9 +303,8 @@ button { font: inherit; }
 
 /* ---------- entrance (single, on load) ---------- */
 @media (prefers-reduced-motion: no-preference) {
-  .side__top, .toc, .side__bottom, .main { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .side__top, .toc, .main { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
   .toc { animation-delay: .08s; }
-  .side__bottom { animation-delay: .14s; }
   .main { animation-delay: .2s; }
   @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
 }
@@ -326,7 +326,6 @@ button { font: inherit; }
   .name { font-size: clamp(60px, 18vw, 96px); }
   .portrait { width: 80px; height: 80px; margin-bottom: 22px; }
   .toc { display: none; }
-  .side__bottom { margin-top: 0; }
   .main { padding-top: 48px; }
   .block { padding-bottom: 64px; }
   .lede { font-size: 19px; }
@@ -346,14 +345,14 @@ button { font: inherit; }
 
 /* ---------- print / PDF ---------- */
 @media print {
-  @page { size: A4; margin: 12mm 13mm 13mm; }
+  @page { size: A4; margin: 10mm 12mm 10mm; }
   :root, :root[data-theme="dark"] {
     --bg: #fff; --surface: #fff; --ink: #000; --ink-2: #1f1f1f; --muted: #555; --line: #d4d4d4;
     --accent: #1f2fa8; --live: #1a7a4c; --nutri-bg: #fff; --tile: #fff;
   }
   html, body { background: #fff; }
   body { font-size: 9pt; line-height: 1.4; }
-  .side__top, .toc, .side__bottom, .main { animation: none !important; }
+  .side__top, .toc, .main { animation: none !important; }
   .page { display: block; padding: 0; max-width: none; }
 
   .side { position: static; height: auto; overflow: visible; padding: 0 0 10pt; gap: 6pt; }
@@ -374,6 +373,8 @@ button { font: inherit; }
   .about { gap: 5pt; max-width: none; }
   .lede { font-size: 9.5pt; line-height: 1.4; color: var(--ink-2); }
   .about p { max-width: none; }
+  /* Paper copy: the second About paragraph repeats the experience below. */
+  .about > p:not(.lede) { display: none; }
   .facts { display: none; }
   .facts dt { font-size: 8pt; }
   .facts dd { font-size: 9pt; }
@@ -388,7 +389,10 @@ button { font: inherit; }
   .creds h3 { font-size: 9.5pt; margin: 0; }
   .creds h3::after { content: ","; }
   .creds p { font-size: 9pt; color: var(--ink-2); }
-  .subhead { font-size: 9.5pt; margin: 4pt 0 2pt; }
+  .subhead { display: none; }
+  .langs { display: flex; flex-wrap: wrap; gap: 0 18pt; }
+  .langs li { display: flex; gap: 6pt; padding: 0; }
+  .langs li span:first-child::after { content: ":"; }
 
   .job { grid-template-columns: 70pt 1fr; padding: 5pt 0; border-top: 0; }
   .job h3 { font-size: 10.5pt; }
@@ -421,9 +425,9 @@ button { font: inherit; }
   .others li { padding: 4pt 0; gap: 1pt; border-top: 0; }
   .others__name { font-size: 9.5pt; }
   .others__name img { display: none; }
-  .others li > p:not(.proj__stack) { font-size: 8.5pt; }
-  .others .proj__stack { display: none; }
+  .others li > p { font-size: 8.5pt; }
   .others .proj__link { display: none; }
+  .others li:nth-child(n+7) { display: none; }
 
   .jobs, .projects { display: block; }
   .job, .proj, .lead-proj__body, .others li, .creds li { break-inside: avoid; }
