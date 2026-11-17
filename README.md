@@ -24,7 +24,7 @@ python3 -m http.server 8080
 
 ## Download CV as PDF
 **Download CV (PDF)** links to `Mai-Ly-CV.pdf` in the repo root. That file is the print version of
-`index.html` (see the `@media print` block in `styles.css`, about 3 A4 pages). Regenerate it after editing content:
+`index.html` (see the `@media print` block in `styles.css`, 2 A4 pages). Regenerate it after editing content:
 
 ```bash
 python3 -m http.server 8765 &
